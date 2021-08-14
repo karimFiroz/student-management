@@ -44,7 +44,14 @@ Route::get('/admin_login', [AdminController::class, 'admin_login'])->name('admin
 Route::get('/logout', [SuperAdminController::class, 'logout'])->name('logout');
 Route::post('/admin-login-check', [AdminController::class, 'adminLoginCheck']);
 
+//admins
 
+Route::get('/admins', [AdminController::class, 'index'])->name('admins');
+Route::get('/admin_create', [AdminController::class, 'admin_create'])->name('admin_create');
+Route::post('/admin_store', [AdminController::class, 'admin_store'])->name('admin_store');
+Route::get('/admin_edit/{id}', [AdminController::class, 'admin_edit'])->name('admin_edit');
+Route::post('/admin_update/{id}', [AdminController::class, 'admin_update'])->name('admin_update');
+Route::post('/admin_delete/{id}', [AdminController::class, 'admin_delete'])->name('admin_delete');
 
 
 
@@ -56,13 +63,9 @@ Route::get('/student_edit/{id}', [StudentController::class, 'student_edit'])->na
 Route::post('/student_update/{id}', [StudentController::class, 'student_update'])->name('student_update');
 Route::post('/student_delete/{id}', [StudentController::class, 'student_delete'])->name('student_delete');
 
-//Monthly Payment
-Route::get('/monthlyPay', [MonthlyPayController::class, 'index'])->name('monthlyPay');
-Route::get('/monthlyPay_create', [MonthlyPayController::class, 'monthlyPay_create'])->name('monthlyPay_create');
-Route::post('/monthlyPay_store', [MonthlyPayController::class, 'monthlyPay_store'])->name('monthlyPay_store');
-Route::get('/monthlyPay_edit/{id}', [MonthlyPayController::class, 'monthlyPay_edit'])->name('monthlyPay_edit');
-Route::post('/monthlyPay_update/{id}', [MonthlyPayController::class, 'monthlyPay_update'])->name('monthlyPay_update');
-Route::post('/monthlyPay_delete/{id}', [MonthlyPayController::class, 'monthlyPay_delete'])->name('monthlyPay_delete');
+
+
+
 
 //users
 Route::get('/users', [UserController::class, 'index'])->name('users');
@@ -90,3 +93,11 @@ Route::post('/image_store',[TeacherImageController::class,'image_store'])->name(
 Route::get('/image_edit{id}',[TeacherImageController::class,'image_edit'])->name('image_edit');
 Route::post('/image_update{id}',[TeacherImageController::class,'image_update'])->name('image_update');
 Route::post('/image_delete{id}',[TeacherImageController::class,'image_delete'])->name('image_delete');
+
+//Monthly Payment
+Route::get('/monthlyPay', [MonthlyPayController::class, 'index'])->name('monthlyPay');
+Route::get('/monthlyPay_create', [MonthlyPayController::class, 'monthlyPay_create'])->name('monthlyPay_create');
+Route::post('/monthlyPay_store', [MonthlyPayController::class, 'monthlyPay_store'])->name('monthlyPay_store');
+Route::get('/monthlyPay_edit/{id}', [MonthlyPayController::class, 'monthlyPay_edit'])->name('monthlyPay_edit');
+Route::post('/monthlyPay_update/{id}', [MonthlyPayController::class, 'monthlyPay_update'])->name('monthlyPay_update');
+Route::post('/monthlyPay_delete/{id}', [MonthlyPayController::class, 'monthlyPay_delete'])->name('monthlyPay_delete');

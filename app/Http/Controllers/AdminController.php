@@ -15,11 +15,11 @@ class AdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-{
- 
-    
-}
+  public function index()
+    {
+        $admins=Admin::orderBy('id','desc')->get();
+        return view('pages.admin.index')->with('admins', $admins);
+    }
 
    
 public function admin_login()

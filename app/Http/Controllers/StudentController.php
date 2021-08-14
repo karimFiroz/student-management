@@ -15,7 +15,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students=Student::orderBy('reg_id','desc')->get();
+        $students=Student::orderBy('id','desc')->get();
         return view('pages.student.index')->with('students', $students);
     }
 
