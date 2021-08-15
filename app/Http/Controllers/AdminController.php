@@ -148,8 +148,10 @@ return redirect()->route('dashboard');
      * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Admin $admin)
+    public function admin_delete($id)
     {
-        //
+       $admin=Admin::find($id);
+       $admin->delete();
+       return redirect()->route('admins');
     }
 }

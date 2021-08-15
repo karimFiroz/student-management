@@ -54,7 +54,6 @@ class StudentController extends Controller
         $student->department=$request->department;
         $student->info=$request->info;
         $student->academy=$request->academy;
-        $student->name=$request->name;
         $student->password=$request->password;
         $student->mobile=$request->mobile;
         $student->save();
@@ -90,7 +89,7 @@ class StudentController extends Controller
     {//insery data into students table
         $student=Student::find($id);
 
-        $student->reg_id=$request->reg_id;
+             $student->reg_id=$request->reg_id;
         $student->roll=$request->roll;
         $student->name=$request->name;
         $student->fname=$request->fname;
@@ -98,7 +97,6 @@ class StudentController extends Controller
         $student->department=$request->department;
         $student->info=$request->info;
         $student->academy=$request->academy;
-        $student->name=$request->name;
         $student->password=$request->password;
         $student->mobile=$request->mobile;
         $student->save();

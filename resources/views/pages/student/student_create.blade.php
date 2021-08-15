@@ -31,36 +31,36 @@
 
   <div class="form-group">
     <label for="uname">1.Reg ID:</label>
-    <input type="text" class="form-control" id="id" placeholder="Enter registration ID" name="reg_id"required>
+    <input type="text" class="form-control" id="id" placeholder="Enter registration ID" name="reg_id">
   </div>
 
 
 
  <div class="form-group">
     <label for="uname">2.Roll:</label>
-    <input type="text" class="form-control" id="roll" placeholder="Enter Roll" name="roll"required>
+    <input type="text" class="form-control" id="roll" placeholder="Enter Roll" name="roll">
   </div>
 
 <div class="form-group">
     <label for="uname">3.Name:</label>
-    <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name"required>
+    <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
   </div>
 
 
 <div class="form-group">
     <label for="funame">4.Father's Name:</label>
-    <input type="text" class="form-control" id="fname" placeholder="Enter Father's Name" name="fname"required>
+    <input type="text" class="form-control" id="fname" placeholder="Enter Father's Name" name="fname">
   </div>
 
 
   <div class="form-group">
     <label for="uname">5.Mother's Name:</label>
-    <input type="text" class="form-control" id="mname" placeholder="Enter Mother's Name" name="mname"required>
+    <input type="text" class="form-control" id="mname" placeholder="Enter Mother's Name" name="mname">
   </div>
 
 <div class="form-group">
     <label for="uname">6.Department:</label>
-    <input type="text" class="form-control" id="department" placeholder="Enter Department" name="department"required>
+    <input type="text" class="form-control" id="department" placeholder="Enter Department" name="department">
   </div>
 
   <div class="form-group">
@@ -70,17 +70,17 @@
 
 <div class="form-group">
     <label for="uname">8.Academy:</label>
-    <input type="text" class="form-control" id="academy" placeholder="Enter Academy name" name="academy"required>
+    <input type="text" class="form-control" id="academy" placeholder="Enter Academy name" name="academy">
   </div>
 
   <div class="form-group">
     <label for="password">9.Password:</label>
-    <input type="text" class="form-control" id="password" placeholder="Enter password" name="password"required>
+    <input type="text" class="form-control" id="password" placeholder="Enter password" name="password">
   </div>
 
 <div class="form-group">
     <label for="mobile">10.Mobile:</label>
-    <input type="text" class="form-control" id="mobile" placeholder="Enter Mobile No" name="mobile"required>
+    <input type="text" class="form-control" id="mobile" placeholder="Enter Mobile No" name="mobile">
   </div>
 
   <button type="submit" class="btn btn-primary">Register Student</button>

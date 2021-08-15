@@ -47,8 +47,8 @@
   </div>
 
 <div class="form-group">
-    <label for="pwd">6.Mobile:</label>
-    <input type="password" class="form-control" id="mobile"value="{{$user->mobile}}" placeholder="Enter Mobile No" name="mobile">
+    <label for="mobile">6.Mobile:</label>
+    <input type="text" class="form-control" id="mobile"value="{{$user->mobile}}" placeholder="Enter Mobile No" name="mobile">
   </div>
 
   <button type="submit" class="btn btn-primary">Update User</button>

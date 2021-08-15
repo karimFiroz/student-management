@@ -63,10 +63,10 @@
                                             <td>{{$admin->phone}}</td>
                                             <td>
                 <a href="{{route('admin_edit',$admin->id)}}"class="btn btn-success btn-sm">Edit</a> 
-       <!--  <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('admin_delete',$admin->id)}}" method="post">
+       <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('admin_delete',$admin->id)}}" method="post">
         @csrf
         <input type="submit" class="btn btn-danger btn-sm" value="Delete"/>
-        </form> -->
+        </form>
                                             </td>
                                         </tr>
 

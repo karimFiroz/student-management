@@ -32,6 +32,7 @@
                                             <th>Department</th>
                                             <th>Info</th>
                                             <th>Academy</th>
+                                            <th>password</th>
                                             <th>Mobile</th>
                                             <th>Action</th>
                                         </tr>
@@ -48,6 +49,7 @@
                                             <th>Department</th>
                                             <th>Info</th>
                                             <th>Academy</th>
+                                            <th>password</th>
                                             <th>Mobile</th>
                                             <th>Action</th>
                                         </tr>
@@ -68,6 +70,7 @@
                                             <td>{{$student->department}}</td>
                                             <td>{{$student->info}}</td>
                                             <td>{{$student->academy}}</td>
+                                            <td>{{$student->password}}</td>
                                             <td>{{$student->mobile}}</td>
                                             <td>
                 <a href="{{route('student_edit',$student->id)}}"class="btn btn-success btn-sm">Edit</a> 

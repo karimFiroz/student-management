@@ -102,6 +102,6 @@ class UserController extends Controller
     {
        $user=User::find($id);
        $user->delete();
-       return redirect()->route('students');
+       return redirect()->route('users');
     }
 }
