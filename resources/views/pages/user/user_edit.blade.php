@@ -21,27 +21,33 @@
     @csrf
 
 <div class="form-group">
-    <label for="uname">1.Name:</label>
+    <label for="user_id">1.Uaer_ID:</label>
+    <input type="text" class="form-control"value="{{$user->user_id}}" id="user_id" placeholder="Enter User ID" name="user_id">
+  </div>
+
+
+<div class="form-group">
+    <label for="uname">2.Name:</label>
     <input type="text" class="form-control"value="{{$user->name}}" id="name" placeholder="Enter Name" name="name">
   </div>
 
 <div class="form-group">
-    <label for="Email">2.Email:</label>
+    <label for="Email">3.Email:</label>
     <input type="text" class="form-control"value="{{$user->email}}" id="email" placeholder="Enter Email" name="email">
   </div>
 
   <div class="form-group">
-    <label for="pwd">3.Password:</label>
+    <label for="pwd">4.Password:</label>
     <input type="password" class="form-control" id="password"value="{{$user->password}}" placeholder="Enter password" name="password">
   </div>
 
   <div class="form-group">
-    <label for="address">4.Address:</label>
+    <label for="address">5.Address:</label>
     <input type="text" class="form-control"value="{{$user->address}}" id="password" placeholder="Enter address" name="address">
   </div>
 
 <div class="form-group">
-    <label for="pwd">5.Mobile:</label>
+    <label for="pwd">6.Mobile:</label>
     <input type="password" class="form-control" id="mobile"value="{{$user->mobile}}" placeholder="Enter Mobile No" name="mobile">
   </div>
 

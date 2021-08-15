@@ -66,9 +66,9 @@ return redirect()->route('dashboard');
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+     public function admin_create()
     {
-        //
+        return view('pages.admin.admin_create');
     }
 
     /**
@@ -77,10 +77,27 @@ return redirect()->route('dashboard');
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+       public function admin_store(Request $request)
     {
-        //
+        //Check validation
+        $this->validate($request,[
+    
+'name'=>'required|string|max:15',
+'password'=>'required|min:6',
+'email'=> 'required|email'
+
+        ]);
+        $admin=new Admin();
+         $admin->admin_id=$request->admin_id;
+         $admin->name=$request->name;
+        $admin->email=$request->email;
+        $admin->address=$request->address;
+        $admin->password=$request->password;
+        $admin->phone=$request->phone;
+        $admin->save();
+       return redirect()->route('admins');
     }
+
 
     /**
      * Display the specified resource.
@@ -99,9 +116,10 @@ return redirect()->route('dashboard');
      * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function edit(Admin $admin)
+   public function admin_edit($id)
     {
-        //
+       $admin= Admin::find($id);
+        return view('pages.admin.admin_edit')->with('admin',$admin);
     }
 
     /**
@@ -111,9 +129,17 @@ return redirect()->route('dashboard');
      * @param  \App\Models\Admin  $admin
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Admin $admin)
-    {
-        //
+     public function Admin_update(Request $request, $id)
+      {
+        $admin=Admin::find($id);
+        $admin->admin_id=$request->admin_id;
+         $admin->name=$request->name;
+        $admin->email=$request->email;
+        $admin->address=$request->address;
+        $admin->password=$request->password;
+        $admin->phone=$request->phone;
+        $admin->save();
+       return redirect()->route('admins');
     }
 
     /**

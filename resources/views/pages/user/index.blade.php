@@ -25,6 +25,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>ID</th>
+                                            <th>User_ID</th>
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Password</th>
@@ -37,6 +38,7 @@
                                         <tr>
                                            <th>#</th>
                                             <th>ID</th>
+                                            <th>User_ID</th>
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Password</th>
@@ -53,6 +55,7 @@
                                         <tr>
                                             <td>{{ $i }}</td>
                                             <td>{{$user->id}}</td>
+                                            <td>{{$user->user_id}}</td>
                                             <td>{{$user->name}}</td>
                                             <td>{{$user->email}}</td>
                                             <td>{{$user->password}}</td>
