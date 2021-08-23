@@ -12,10 +12,17 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+
+
     public function index()
     {
         return view('pages.auth.user_login');
     }
+
+
+
 
 
    public function user_login(Request $request)
@@ -35,6 +42,41 @@ class LoginController extends Controller
    }else{
     return redirect()->route('home_page');
    }
+}
+
+
+
+
+
+
+
+
+public function teacher_login()
+    {
+        return view('pages.auth.teacher_login');
+    }
+
+
+
+
+   public function check_teacher(Request $request)
+    {
+        $email=$request->email;
+    $password=$request->password;
+
+    $result=DB::table('teachers')
+    ->where('email', $email)
+    ->where('password', $password)
+    ->first();
+    // echo '<pre>';
+    // print_r($result);
+    // exit();
+ if($result){
+    return redirect()->route('welcome');
+   }else{
+    return redirect()->route('home_page');
+   }
+
 }
 
 

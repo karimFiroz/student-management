@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SuperAdminController;
@@ -25,12 +26,16 @@ Route::get('/', function () {
 |
 */
 
+//Registration
+
+
 //pages
 Route::get('/', [PagesController::class, 'index'])->name('home_page');
 Route::get('/all_students', [PagesController::class, 'all_students'])->name('all_students');
 Route::get('/about', [PagesController::class, 'about'])->name('about');
 Route::get('/contact', [PagesController::class, 'contact'])->name('contact');
 Route::get('/welcome', [PagesController::class, 'welcome'])->name('welcome');
+
 
 
 //Dashboard
@@ -40,6 +45,8 @@ Route::get('/dashboard', [SuperAdminController::class, 'index'])->name('dashboar
 //Authendicate
 Route::get('/index', [Auth\LoginController::class, 'index'])->name('index');
 Route::post('/user_login', [Auth\LoginController::class, 'user_login'])->name('user_login');
+Route::get('/teacher_login', [Auth\LoginController::class, 'teacher_login'])->name('teacher_login');
+Route::post('/check_teacher', [Auth\LoginController::class, 'check_teacher'])->name('check_teacher');
 Route::get('/admin_login', [AdminController::class, 'admin_login'])->name('admin_login');
 Route::get('/logout', [SuperAdminController::class, 'logout'])->name('logout');
 Route::post('/admin-login-check', [AdminController::class, 'adminLoginCheck']);
@@ -74,6 +81,8 @@ Route::post('/user_store', [UserController::class, 'user_store'])->name('user_st
 Route::get('/user_edit/{id}', [UserController::class, 'user_edit'])->name('user_edit');
 Route::post('/user_update/{id}', [UserController::class, 'user_update'])->name('user_update');
 Route::post('/user_delete/{id}', [UserController::class, 'user_delete'])->name('user_delete');
+
+
 
 //Teacher
 Route::get('/teachers',[TeacherController::class,'index'])->name('teachers');

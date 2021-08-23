@@ -79,7 +79,7 @@
 $admin=Session::get('name');
 if(isset($admin))
 {
-    echo "<strong>Now Login:</strong>".' '. $admin.'<br />';
+    echo "<strong>Now Login As:</strong>".' '. $admin.'<br />';
 }
     ?>
 

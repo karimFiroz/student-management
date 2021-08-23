@@ -47,7 +47,7 @@ class UserController extends Controller
         $user->address=$request->address;
         $user->mobile=$request->mobile;
         $user->save();
-       return redirect()->route('users');
+        return redirect()->route('index');
     }
 
     /**

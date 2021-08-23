@@ -56,6 +56,7 @@
            
            
             <li><a class="dropdown-item" href="https://www.canva.com/design/DAECwzwq0N0/8RQ-2nTwXiD0OxlJJ2naZg/edit?category=tACZCnmCPGY"target="_blank">Canva</a></li>
+            <li><a class="dropdown-item" href="https://www.youtube.com/channel/UChzD5TZP7se95B9w7SOcm2g/playlists"target="_blank">Cpanel Tutorial</a></li>
            
           </ul>
 

@@ -45,11 +45,10 @@ class TeacherController extends Controller
         $teacher->email=$request->email;
         $teacher->degree=$request->degree;
         $teacher->address=$request->address;
-        
         $teacher->password=$request->password;
         $teacher->mobile=$request->mobile;
         $teacher->save();
-        return redirect()->route('teachers');
+        return redirect()->route('welcome');
     }
 
     /**
@@ -118,4 +117,10 @@ class TeacherController extends Controller
          $teachers=Teacher::orderBy('id','asc')->get();
         return view('pages.teacher.employee_teacher')->with('teachers', $teachers);
     }
+
+    
+
+}
+
+
 }

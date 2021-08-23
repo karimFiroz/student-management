@@ -29,6 +29,7 @@
                                             <th>Name</th>
                                             <th>Designation</th>
                                             <th>Email</th>
+                                            <th>Password</th>
                                             <th>Degree</th>
                                             <th>Address</th>
                                             <th>Mobile</th>
@@ -44,6 +45,7 @@
                                             <th>Name</th>
                                             <th>Designation</th>
                                             <th>Email</th>
+                                            <th>Password</th>
                                             <th>Degree</th>
                                             <th>Address</th>
                                             <th>Mobile</th>
@@ -63,6 +65,7 @@
                                             <td>{{$teacher->name}}</td>
                                             <td>{{$teacher->designation}}</td>
                                             <td>{{$teacher->email}}</td>
+                                            <td>{{$teacher->password}}</td>
                                             <td>{{$teacher->degree}}</td>
                                             <td>{{$teacher->address}}</td>
                                             <td>{{$teacher->mobile}}</td>

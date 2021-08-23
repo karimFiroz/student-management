@@ -39,7 +39,7 @@ public function logout()
 Session::put('admin_id','');
 Session::put('name','');
 Session::put('message','You are successfully logout!!');
-return redirect()->route('admin_login');
+return redirect()->route('home_page');
     return view('pages.superAdmin.logout ');
 }
 

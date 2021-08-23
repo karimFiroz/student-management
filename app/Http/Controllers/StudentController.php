@@ -57,7 +57,7 @@ class StudentController extends Controller
         $student->password=$request->password;
         $student->mobile=$request->mobile;
         $student->save();
-        return redirect()->route('students');
+        return redirect()->route('welcome');
     }
 
     /**

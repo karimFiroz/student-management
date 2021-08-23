@@ -1,3 +1,10 @@
 RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://firozlearninghome.com/$1 [R,L]
+
+
+
+
+DB_DATABASE=student-management
+DB_USERNAME=moontasi_mahmood
+DB_PASSWORD=*j2-9*=RmFq+
