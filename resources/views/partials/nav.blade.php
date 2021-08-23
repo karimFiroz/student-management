@@ -36,12 +36,26 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="{{route('admin_login')}}">Admin Login</a></li>
             <li><hr class="dropdown-divider"></li>
+
+             
+            <li><a class="dropdown-item" href="{{route('index')}}">User Login</a></li>
+            <li><hr class="dropdown-divider"></li>
+
+
+              
+            <li><a class="dropdown-item" href="{{route('teacher_login')}}">Teacher Login</a></li>
+            <li><hr class="dropdown-divider"></li>
+
             <li class="nav-item">
           <a class="nav-link" href="{{route('user_create')}}">User Registration</a>
         </li>
         <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="{{route('index')}}">User Login</a></li>
-            <li><hr class="dropdown-divider"></li>
+
+      <li class="nav-item">
+          <a class="nav-link" href="{{route('teacher_create')}}">Teacher Registration</a>
+        </li>
+        <li><hr class="dropdown-divider"></li>
+
             <li><a class="dropdown-item" href="{{route('logout')}}">Logout</a></li>
           </ul>
 

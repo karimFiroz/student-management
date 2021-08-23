@@ -48,7 +48,7 @@ class TeacherController extends Controller
         $teacher->password=$request->password;
         $teacher->mobile=$request->mobile;
         $teacher->save();
-        return redirect()->route('welcome');
+        return redirect()->route('teacher_login');
     }
 
     /**
@@ -122,5 +122,3 @@ class TeacherController extends Controller
 
 }
 
-
-}

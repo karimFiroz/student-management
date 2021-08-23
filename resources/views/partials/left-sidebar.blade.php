@@ -6,9 +6,11 @@
 
   <a href="{{route('index')}}" class="list-group-item list-group-item-action list-group-item-secondary">User Login</a>
 
+   <a href="{{route('teacher_login')}}" class="list-group-item list-group-item-action list-group-item-dark">Teacher Login</a>
+
   <a href="{{route('user_create')}}" class="list-group-item list-group-item-action list-group-item-info">User Registration</a>
 
-   <a href="{{route('teacher_login')}}" class="list-group-item list-group-item-action list-group-item-dark">Teacher Login</a>
+  
 
   <a href="{{route('teacher_create')}}" class="list-group-item list-group-item-action list-group-item-success">Teacher Registration</a>
 
