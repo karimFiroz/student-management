@@ -11,6 +11,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\MonthlyPayController;
 use App\Http\Controllers\TeacherImageController;
 use App\Http\Controllers\Auth;
+use App\Http\Controllers\ImageUploadController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,13 +21,16 @@ use App\Http\Controllers\Auth;
 Route::get('/', function () {
     return view('welcome');
 });
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+
 |
 */
 
-//Registration
+//file upload
+Route::get('file-upload', [ImageUploadController::class, 'index'])->name('file-upload');
+Route::post('file-upload', [ImageUploadController::class, 'store']);
+Route::get('delete-file', [ImageUploadController::class, 'delete'])->name('delete-file');
+
+
 
 
 //pages

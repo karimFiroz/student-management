@@ -6,9 +6,9 @@
 
   <a href="{{route('index')}}" class="list-group-item list-group-item-action list-group-item-secondary">User Login</a>
 
-   <a href="{{route('teacher_login')}}" class="list-group-item list-group-item-action list-group-item-dark">Teacher Login</a>
+   <a href="{{route('file-upload')}}" class="list-group-item list-group-item-action list-group-item-dark">Upload Image</a>
 
-  <a href="{{route('user_create')}}" class="list-group-item list-group-item-action list-group-item-info">User Registration</a>
+  <a href="{{route('delete-file')}}" class="list-group-item list-group-item-action list-group-item-info">Delete Image</a>
 
   
 
