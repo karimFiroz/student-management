@@ -78,14 +78,29 @@
     <input type="text" class="form-control" id="password" placeholder="Enter password" name="password">
   </div>
 
+
+
 <div class="form-group">
     <label for="mobile">10.Mobile:</label>
     <input type="text" class="form-control" id="mobile" placeholder="Enter Mobile No" name="mobile">
   </div>
+
+
+
+<div class="form-group">
+    <label for="image">11.Image:</label>
+    <input type="text" class="form-control" id="image" placeholder="Enter image url" name="image">
+  </div>
+
+
 
   <button type="submit" class="btn btn-primary">Register Student</button>
 </form>
     </div>
    </div>
   </div>
+   
 @endsection
+
+
+ 

@@ -15,6 +15,7 @@ class ImageUploadController extends Controller
      */
     public function index()
     {
+        
     return view('imageUpload.image');
     }
 
@@ -22,16 +23,16 @@ class ImageUploadController extends Controller
 
  public function store(Request $request)    
     {
-         // echo $request->file('image')->getClientOriginalName();
-         // echo $request->file('image')->extension();
-   echo $path = $request->file('image')->store('images');
-
-        if(isset($path)){
-          
+       
+  echo  $path = $request->file('image')->store('images');
+  if(isset($path)){
+            $url =asset(Storage::url($path));
         echo "<img src='storage/app/$path' height='100' width='100'>";
-
-        echo '<a href="storage\app\images\$path">Delete</a>';
+       
+      
+        return view('pages.student.index')->with('path',$path);
         }
+
     }
 
 
@@ -93,8 +94,8 @@ class ImageUploadController extends Controller
      * @param  \App\Models\ImageUpload  $imageUpload
      * @return \Illuminate\Http\Response
      */
-   public function delete()
+    public function delete()
     {
-        Storage::delete('storage\app\images\$path');
+        Storage::delete();
     }
 }

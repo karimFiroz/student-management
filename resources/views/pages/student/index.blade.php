@@ -5,11 +5,13 @@
      <main>
                     <div class="container-fluid px-4">
                         <h2 class="mt-4"align="center">Student Registration</h2>
-                       
+                   
                         <div class="card mb-4">
                             <div class="card-body">
             <center><a class="btn btn-info" href="{{route('student_create')}}"><strong> Create student</strong></a></center>
-                               
+                            
+    <a href="{{route('file-upload')}}"target=" _blank">Upload</a>|
+    <a href="{{route('delete-file')}}">Delete</a>
                        
                             </div>
                        
@@ -34,6 +36,7 @@
                                             <th>Academy</th>
                                             <th>password</th>
                                             <th>Mobile</th>
+                                            <th>image</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -51,6 +54,7 @@
                                             <th>Academy</th>
                                             <th>password</th>
                                             <th>Mobile</th>
+                                            <th>image</th>
                                             <th>Action</th>
                                         </tr>
                                     </tfoot>
@@ -72,6 +76,13 @@
                                             <td>{{$student->academy}}</td>
                                             <td>{{$student->password}}</td>
                                             <td>{{$student->mobile}}</td>
+                                            <td>
+     <?php
+                                                
+     echo "<img src='storage/app/{{$student->image}}' height='100' width='100'>";
+         ?>
+                                             </td>
+
                                             <td>
                 <a href="{{route('student_edit',$student->id)}}"class="btn btn-success btn-sm">Edit</a> 
          <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('student_delete',$student->id)}}" method="post">

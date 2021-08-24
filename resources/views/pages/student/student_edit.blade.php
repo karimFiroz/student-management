@@ -73,6 +73,14 @@
     <input type="text" class="form-control" value="{{$student->mobile}}"  id="mobile" placeholder="Enter Mobile No" name="mobile">
   </div>
 
+
+<div class="form-group">
+    <label for="image">11.Image:</label>
+    <input type="text" class="form-control" value="{{$student->image}}"  id="mobile" placeholder="Enter image url" name="image">
+  </div>
+
+
+
   <button type="submit" class="btn btn-primary">Update Student</button>
 </form>
     </div>

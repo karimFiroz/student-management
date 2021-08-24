@@ -2,7 +2,7 @@ APP_NAME=Laravel
 APP_ENV=local
 APP_KEY=base64:uWPQMz2mWmrzdcSKJQHLzB420/rzG01uRGnNqAazrQ8=
 APP_DEBUG=true
-APP_URL=http://localhost
+APP_URL=https://karim.moontasir.com/
 
 LOG_CHANNEL=stack
 LOG_LEVEL=debug
@@ -10,9 +10,9 @@ LOG_LEVEL=debug
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=firozlearninghom_firoz
-DB_USERNAME=firozlearninghom_karim
-DB_PASSWORD=Firoz264644
+DB_DATABASE=moontasi_moontasi
+DB_USERNAME=moontasi_mahmood
+DB_PASSWORD=*j2-9*=RmFq+
 
 BROADCAST_DRIVER=log
 CACHE_DRIVER=file

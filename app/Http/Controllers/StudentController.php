@@ -56,6 +56,7 @@ class StudentController extends Controller
         $student->academy=$request->academy;
         $student->password=$request->password;
         $student->mobile=$request->mobile;
+        $student->image=$request->image;
         $student->save();
         return redirect()->route('welcome');
     }
@@ -99,6 +100,7 @@ class StudentController extends Controller
         $student->academy=$request->academy;
         $student->password=$request->password;
         $student->mobile=$request->mobile;
+        $student->image=$request->image;
         $student->save();
         return redirect()->route('students');
     }
