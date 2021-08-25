@@ -89,6 +89,7 @@ return redirect()->route('dashboard');
         ]);
         $admin=new Admin();
          $admin->admin_id=$request->admin_id;
+         $admin->group_id=$request->group_id;
          $admin->name=$request->name;
         $admin->email=$request->email;
         $admin->address=$request->address;
@@ -133,6 +134,7 @@ return redirect()->route('dashboard');
       {
         $admin=Admin::find($id);
         $admin->admin_id=$request->admin_id;
+        $admin->group_id=$request->group_id;
          $admin->name=$request->name;
         $admin->email=$request->email;
         $admin->address=$request->address;

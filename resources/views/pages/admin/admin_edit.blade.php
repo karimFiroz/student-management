@@ -27,12 +27,19 @@
 
 
 <div class="form-group">
-    <label for="uname">2.Name:</label>
+    <label for="Group_id">2.Group_ID:</label>
+    <input type="text" class="form-control"value="{{$admin->group_id}}" id="group_id" placeholder="Enter Group ID" name="group_id">
+  </div>
+
+
+
+<div class="form-group">
+    <label for="uname">3.Name:</label>
     <input type="text" class="form-control"value="{{$admin->name}}" id="name" placeholder="Enter Admin Name" name="name">
   </div>
 
 <div class="form-group">
-    <label for="Email">3.Email:</label>
+    <label for="Email">4.Email:</label>
     <input type="text" class="form-control"value="{{$admin->email}}" id="email" placeholder="Enter Admin Email" name="email">
   </div>
 
@@ -43,14 +50,14 @@
 
 
   <div class="form-group">
-    <label for="pwd">4.Password:</label>
+    <label for="pwd">6.Password:</label>
     <input type="password" class="form-control" id="password"value="{{$admin->password}}" placeholder="Enter password" name="password">
   </div>
 
  
 
 <div class="form-group">
-    <label for="phone">6.Phone:</label>
+    <label for="phone">7.Phone:</label>
     <input type="text" class="form-control" id="phone"value="{{$admin->phone}}" placeholder="Enter Phone No" name="phone">
   </div>
 

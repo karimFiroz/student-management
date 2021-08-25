@@ -26,6 +26,8 @@
                                             <th>#</th>
                                             <th>ID</th>
                                             <th>User_ID</th>
+                                            <th>Group_ID</th>
+                                            <th>Group</th>
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Password</th>
@@ -39,6 +41,8 @@
                                            <th>#</th>
                                             <th>ID</th>
                                             <th>User_ID</th>
+                                            <th>Group_ID</th>
+                                            <th>Group</th>
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Password</th>
@@ -56,6 +60,8 @@
                                             <td>{{ $i }}</td>
                                             <td>{{$user->id}}</td>
                                             <td>{{$user->user_id}}</td>
+                                            <td>{{$user->group_id}}</td>
+                                            <td>{{$user->group}}</td>
                                             <td>{{$user->name}}</td>
                                             <td>{{$user->email}}</td>
                                             <td>{{$user->password}}</td>

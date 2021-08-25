@@ -26,6 +26,7 @@
                                             <th>#</th>
                                             <th>ID</th>
                                             <th>Admin_ID</th>
+                                            <th>Group_ID</th>
                                             <th>Name</th>
                                             <th>Email</th>
                                              <th>Address</th>
@@ -39,6 +40,7 @@
                                             <th>#</th>
                                             <th>ID</th>
                                             <th>Admin_ID</th>
+                                            <th>Group_ID</th>
                                             <th>Name</th>
                                             <th>Email</th>
                                              <th>Address</th>
@@ -56,6 +58,7 @@
                                             <td>{{ $i }}</td>
                                             <td>{{$admin->id}}</td>
                                             <td>{{$admin->admin_id}}</td>
+                                            <td>{{$admin->group_id}}</td>
                                             <td>{{$admin->name}}</td>
                                             <td>{{$admin->email}}</td>
                                             <td>{{$admin->address}}</td>

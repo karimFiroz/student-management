@@ -16,7 +16,8 @@
                 <h3 class="card-title">Students Monthly Payment</h3>
   <a href="{{route('monthlyPay_create')}}"class="btn btn-info btn-sm">MonthlyPay_create</a>
 
-               
+                <a href="{{route('file-upload')}}"target=" _blank">Upload</a>|
+    <a href="{{route('delete-file')}}">Delete</a>
               </div>
               <!-- /.card-header -->
               <div class="card-body table-responsive p-0" style="height: 300px;">
@@ -83,7 +84,13 @@
                       <td>{{ $monthlyPay->syllebus }}</td>
                       <td>{{ $monthlyPay->others }}</td>
                       <td>{{ $monthlyPay->total }}</td>
-                      <td>{{ $monthlyPay->pic }}</td>
+                      <td>
+				
+     <?php
+                                                
+     echo "<img src='storage/app/{{ $monthlyPay->pic }}' height='100' width='100'>";
+         ?>
+                                             </td>
                        <td>
   <a href="{{route('monthlyPay_edit',$monthlyPay->id)}}"class="btn btn-success btn-sm">Edit</a>
 

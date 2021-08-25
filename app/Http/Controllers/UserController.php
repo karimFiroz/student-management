@@ -41,6 +41,8 @@ class UserController extends Controller
         ]);
         $user=new User();
          $user->user_id=$request->user_id;
+         $user->group_id=$request->group_id;
+         $user->group=$request->group;
          $user->name=$request->name;
         $user->email=$request->email;
         $user->password=$request->password;
@@ -83,6 +85,8 @@ class UserController extends Controller
       {
         $user=User::find($id);
         $user->user_id=$request->user_id;
+        $user->group_id=$request->group_id;
+         $user->group=$request->group;
         $user->name=$request->name;
         $user->email=$request->email;
         $user->password=$request->password;

@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container margin-top-20"><!--container start-->
   <div class="container-fluid">
-    <a class="navbar-brand" href="{{url('/')}}"><strong><h1 style="color:#000000;font-size:32px">Firoz Learning Home</h1></strong></a>
+    <a class="navbar-brand" href="{{url('/')}}"><strong><h1 style="color:#000000;font-size:32px">pos</h1></strong></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

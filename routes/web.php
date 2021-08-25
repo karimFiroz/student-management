@@ -1,7 +1,6 @@
 <?php
-
+use App\Http\Controllers\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SuperAdminController;
@@ -10,8 +9,17 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MonthlyPayController;
 use App\Http\Controllers\TeacherImageController;
-use App\Http\Controllers\Auth;
 use App\Http\Controllers\ImageUploadController;
+use App\Http\Controllers\GroupController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\SaleInvoiceController;
+use App\Http\Controllers\SaleItemController;
+use App\Http\Controllers\PurchaseInvoiceController;
+use App\Http\Controllers\PurchaseItemController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ReceiptController;
+use App\Http\Controllers\RegistrationController;
 
 /*
 |--------------------------------------------------------------------------

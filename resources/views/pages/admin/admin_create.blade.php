@@ -36,14 +36,19 @@
     <input type="text" class="form-control" id="admin_id" placeholder="Enter Admin_ID" name="admin_id">
   </div>
 
+<div class="form-group">
+    <label for="group_id">2.Group_ID:</label>
+    <input type="text" class="form-control" id="group_id" placeholder="Enter Group_ID" name="group_id">
+  </div>
+
 
 <div class="form-group">
-    <label for="adminName">2.Admin Name:</label>
+    <label for="adminName">3.Admin Name:</label>
     <input type="text" class="form-control" id="name" placeholder="Enter Admin Name" name="name">
   </div>
 
 <div class="form-group">
-    <label for="Email">3.Admin's Email:</label>
+    <label for="Email">4.Admin's Email:</label>
     <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email">
   </div>
 
@@ -54,14 +59,14 @@
   </div>
 
   <div class="form-group">
-    <label for="password">4.Admin's Password:</label>
+    <label for="password">6.Admin's Password:</label>
     <input type="text" class="form-control" id="password" placeholder="Enter password" name="password">
   </div>
 
  
 
 <div class="form-group">
-    <label for="phone">6.Mobile:</label>
+    <label for="phone">7.Mobile:</label>
     <input type="text" class="form-control" id="phone" placeholder="Enter Phone No" name="phone">
   </div>
 

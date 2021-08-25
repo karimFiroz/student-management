@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ImageUpload;
+use App\Models\Payment;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-use File;
-class ImageUploadController extends Controller
+
+class PaymentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,24 +14,8 @@ class ImageUploadController extends Controller
      */
     public function index()
     {
-        
-    return view('imageUpload.image');
+        //
     }
-
-
-
- public function store(Request $request)    
-    {
-       
-  echo  $path = $request->file('image')->store('images');
-  if(isset($path)){
-            $url =asset(Storage::url($path));
-        echo "<img src='storage/app/$path' height='100' width='100'>";
-       
-        }
-
-    }
-
 
     /**
      * Show the form for creating a new resource.
@@ -50,15 +33,18 @@ class ImageUploadController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-   
+    public function store(Request $request)
+    {
+        //
+    }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\ImageUpload  $imageUpload
+     * @param  \App\Models\Payment  $payment
      * @return \Illuminate\Http\Response
      */
-    public function show(ImageUpload $imageUpload)
+    public function show(Payment $payment)
     {
         //
     }
@@ -66,10 +52,10 @@ class ImageUploadController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\ImageUpload  $imageUpload
+     * @param  \App\Models\Payment  $payment
      * @return \Illuminate\Http\Response
      */
-    public function edit(ImageUpload $imageUpload)
+    public function edit(Payment $payment)
     {
         //
     }
@@ -78,10 +64,10 @@ class ImageUploadController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\ImageUpload  $imageUpload
+     * @param  \App\Models\Payment  $payment
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ImageUpload $imageUpload)
+    public function update(Request $request, Payment $payment)
     {
         //
     }
@@ -89,11 +75,11 @@ class ImageUploadController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\ImageUpload  $imageUpload
+     * @param  \App\Models\Payment  $payment
      * @return \Illuminate\Http\Response
      */
-    public function delete()
+    public function destroy(Payment $payment)
     {
-        Storage:: delete();
+        //
     }
 }
