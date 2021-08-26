@@ -23,7 +23,7 @@
                                 <table  class="table table-responsive table-hover">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th>SN</th>
                                             <th>ID</th>
                                             <th>User_ID</th>
                                             <th>Group_ID</th>
@@ -38,7 +38,7 @@
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                           <th>#</th>
+                                           <th>SN</th>
                                             <th>ID</th>
                                             <th>User_ID</th>
                                             <th>Group_ID</th>

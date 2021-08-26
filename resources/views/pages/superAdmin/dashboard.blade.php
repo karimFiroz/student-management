@@ -1,14 +1,14 @@
  
- @extends('layouts.master')
+ @extends('layouts.master2')
 @section('title','Dashboard')
-@section('main_content')
+@section('content')
  
 
         
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="{{asset('public/frontend')}}/#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                        <a href="{{asset('public/backend')}}/#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
 
@@ -251,17 +251,17 @@
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
                                     <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="{{asset('public/frontend')}}/#" role="button" id="dropdownMenuLink"
+                                        <a class="dropdown-toggle" href="{{asset('public/backend')}}/#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                                             aria-labelledby="dropdownMenuLink">
                                             <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="{{asset('public/frontend')}}/#">Action</a>
-                                            <a class="dropdown-item" href="{{asset('public/frontend')}}/#">Another action</a>
+                                            <a class="dropdown-item" href="{{asset('public/backend')}}/#">Action</a>
+                                            <a class="dropdown-item" href="{{asset('public/backend')}}/#">Another action</a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="{{asset('public/frontend')}}/#">Something else here</a>
+                                            <a class="dropdown-item" href="{{asset('public/backend')}}/#">Something else here</a>
                                         </div>
                                     </div>
                                 </div>
@@ -282,17 +282,17 @@
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
                                     <div class="dropdown no-arrow">
-                                        <a class="dropdown-toggle" href="{{asset('public/frontend')}}/#" role="button" id="dropdownMenuLink"
+                                        <a class="dropdown-toggle" href="{{asset('public/backend')}}/#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
                                         </a>
                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                                             aria-labelledby="dropdownMenuLink">
                                             <div class="dropdown-header">Dropdown Header:</div>
-                                            <a class="dropdown-item" href="{{asset('public/frontend')}}/#">Action</a>
-                                            <a class="dropdown-item" href="{{asset('public/frontend')}}/#">Another action</a>
+                                            <a class="dropdown-item" href="{{asset('public/backend')}}/#">Action</a>
+                                            <a class="dropdown-item" href="{{asset('public/backend')}}/#">Another action</a>
                                             <div class="dropdown-divider"></div>
-                                            <a class="dropdown-item" href="{{asset('public/frontend')}}/#">Something else here</a>
+                                            <a class="dropdown-item" href="{{asset('public/backend')}}/#">Something else here</a>
                                         </div>
                                     </div>
                                 </div>
@@ -372,6 +372,9 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+                                
                                 <div class="col-lg-6 mb-4">
                                     <div class="card bg-success text-white shadow">
                                         <div class="card-body">
@@ -380,6 +383,9 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+
                                 <div class="col-lg-6 mb-4">
                                     <div class="card bg-info text-white shadow">
                                         <div class="card-body">
@@ -388,6 +394,9 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+
                                 <div class="col-lg-6 mb-4">
                                     <div class="card bg-warning text-white shadow">
                                         <div class="card-body">
@@ -396,6 +405,10 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+
+
                                 <div class="col-lg-6 mb-4">
                                     <div class="card bg-danger text-white shadow">
                                         <div class="card-body">
@@ -404,6 +417,10 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+
+
                                 <div class="col-lg-6 mb-4">
                                     <div class="card bg-secondary text-white shadow">
                                         <div class="card-body">
@@ -412,6 +429,9 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+
                                 <div class="col-lg-6 mb-4">
                                     <div class="card bg-light text-black shadow">
                                         <div class="card-body">
@@ -420,6 +440,9 @@
                                         </div>
                                     </div>
                                 </div>
+
+
+
                                 <div class="col-lg-6 mb-4">
                                     <div class="card bg-dark text-white shadow">
                                         <div class="card-body">
@@ -442,13 +465,13 @@
                                 <div class="card-body">
                                     <div class="text-center">
                                         <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                            src="{{asset('public/frontend')}}/img/undraw_posting_photo.svg" alt="...">
+                                            src="{{asset('public/backend')}}/img/undraw_posting_photo.svg" alt="...">
                                     </div>
                                     <p>Add some quality, svg illustrations to your project courtesy of <a
-                                            target="_blank" rel="nofollow" href="{{asset('public/frontend')}}/https://undraw.co/">unDraw</a>, a
+                                            target="_blank" rel="nofollow" href="{{asset('public/backend')}}/https://undraw.co/">unDraw</a>, a
                                         constantly updated collection of beautiful svg images that you can use
                                         completely free and without attribution!</p>
-                                    <a target="_blank" rel="nofollow" href="{{asset('public/frontend')}}/https://undraw.co/">Browse Illustrations on
+                                    <a target="_blank" rel="nofollow" href="{{asset('public/backend')}}/https://undraw.co/">Browse Illustrations on
                                         unDraw &rarr;</a>
                                 </div>
                             </div>

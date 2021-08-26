@@ -2,9 +2,9 @@
    <div class="list-group">
   <a href="{{route('dashboard')}}" class="list-group-item list-group-item-success">Dashboard</a>
 
-  <a href="{{route('admin_login')}}" class="list-group-item list-group-item-action list-group-item-success">Admin Login</a>
+  <a href="{{route('admin_login')}}" class="list-group-item list-group-item-action list-group-item-success">Category</a>
 
-  <a href="{{route('index')}}" class="list-group-item list-group-item-action list-group-item-secondary">User Login</a>
+  <a href="{{route('index')}}" class="list-group-item list-group-item-action list-group-item-secondary">Products</a>
 
 
 

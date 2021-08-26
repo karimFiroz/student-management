@@ -16,7 +16,7 @@ class ImageUploadController extends Controller
     public function index()
     {
         
-    return view('imageUpload.image');
+    return view('pages.imageUpload.image');
     }
 
 

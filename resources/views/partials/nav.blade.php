@@ -72,11 +72,11 @@
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="https://moontasir.com/"target="__blank">Moontasir Mahmood</a></li>
            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="https://wordpress.firozlearninghome.com/"target="__blank">Wordpress Firoz Learning Home</a></li>
+           
+            <li><a class="dropdown-item" href="http://wordpress.moontasir.com/"target="__blank">Erfan-Ali Web</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="http://resume.firozlearninghome.com/"target="__blank">Erfan-Ali Web</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="https://firozlearninghome.com/firozshah/"target="__blank">Firozshah School</a></li>
+            <li><a class="dropdown-item" href="https://karim.moontasir.com/firozshah/"target="__blank">Firozshah School</a></li>
+             <li><hr class="dropdown-divider"></li>
           </ul>
 
 
