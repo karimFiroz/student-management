@@ -21,6 +21,8 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ReceiptController;
 use App\Http\Controllers\RegistrationController;
 
+
+use App\Models\Group;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,6 +34,19 @@ Route::get('/', function () {
 
 |
 */
+
+
+Route::get('/groups', [GroupController::class, 'index'])->name('groups');
+Route::get('/groups_create', [GroupController::class, 'groups_create'])->name('groups_create');
+Route::post('/groups_store', [GroupController::class, 'groups_store'])->name('groups_store');
+Route::get('/groups_edit/{id}', [GroupController::class, 'groups_edit'])->name('groups_edit');
+Route::post('/groups_update/{id}', [GroupController::class, 'groups_update'])->name('groups_update');
+Route::post('/groups_delete/{id}', [GroupController::class, 'groups_delete'])->name('groups_delete');
+
+
+
+
+
 
 //file upload
 Route::get('file-upload', [ImageUploadController::class, 'index'])->name('file-upload');

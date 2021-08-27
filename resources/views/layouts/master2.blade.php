@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-     <title>@yield('title','pageName')</title>
+    <title>@yield('title','pageName')</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('public/backend')}}/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -38,35 +38,41 @@
                 <div class="sidebar-brand-text mx-3">POS</sup></div>
             </a>
 
-            <!-- Divider -->
+ <!-- Divider -->
             <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <!-- Nav Item - Admin Login -->
+            <li class="nav-item">
                 <a class="nav-link" href="{{route('admin_login')}}">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Admin Login</span></a>
             </li>
 
+
+ <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+  <!-- Nav Item - Admin Login -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('index')}}">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>user Login</span></a>
+            </li>
+
+
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-           
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="{{route('index')}}">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>User Login</span></a>
-            </li>
-
-            <!-- Divider -->
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
+            </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{asset('public/backend')}}/#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Users</span>
+                    <span>Components</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -77,12 +83,17 @@
                 </div>
             </li>
 
+
+
+
+ <!-- Divider -->
+            <hr class="sidebar-divider my-0">
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{asset('public/backend')}}/#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Groups</span>
+                    <span>Utilities</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
@@ -104,12 +115,12 @@
                 Addons
             </div>
 
-            <!-- Nav Item - Pages Collapse Menu -->
+           <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{asset('public/backend')}}/#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Products</span>
+                    <span>Pages</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -125,12 +136,24 @@
                 </div>
             </li>
 
+
+
+
+ <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
             <!-- Nav Item - Charts -->
             <li class="nav-item">
                 <a class="nav-link" href="{{asset('public/backend')}}/charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Charts</span></a>
             </li>
+
+
+
+            
+ <!-- Divider -->
+            <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
@@ -145,13 +168,6 @@
             <!-- Sidebar Toggler (Sidebar) -->
             <div class="text-center d-none d-md-inline">
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-
-            <!-- Sidebar Message -->
-            <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="{{asset('public/backend')}}/img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="{{asset('public/backend')}}/https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
             </div>
 
         </ul>
@@ -336,7 +352,8 @@
                             <a class="nav-link dropdown-toggle" href="{{asset('public/backend')}}/#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">
-    
+
+ 
           
            <?php
 
@@ -347,12 +364,8 @@ if(isset($admin))
 }
     ?>
 
-
-
-
                             </span>
-                                <img class="img-profile rounded-circle"
-                                   <img src="{{asset('public')}}/images/favicon.png" alt="karim">
+                                <img src="{{asset('public')}}/images/favicon.png" alt="karim">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -384,12 +397,21 @@ if(isset($admin))
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
+
+                    <!-- Page Heading -->
+        
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
 @yield('content')
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2021</span>
+                        <span>Copyright &copy; Your Website 2020</span>
                     </div>
                 </div>
             </footer>
@@ -435,13 +457,6 @@ if(isset($admin))
 
     <!-- Custom scripts for all pages-->
     <script src="{{asset('public/backend')}}/js/sb-admin-2.min.js"></script>
-
-    <!-- Page level plugins -->
-    <script src="{{asset('public/backend')}}/vendor/chart.js/Chart.min.js"></script>
-
-    <!-- Page level custom scripts -->
-    <script src="{{asset('public/backend')}}/js/demo/chart-area-demo.js"></script>
-    <script src="{{asset('public/backend')}}/js/demo/chart-pie-demo.js"></script>
 
 </body>
 

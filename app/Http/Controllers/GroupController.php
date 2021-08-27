@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Group;
 use Illuminate\Http\Request;
-
+use DB;
 class GroupController extends Controller
 {
     /**
@@ -12,74 +12,66 @@ class GroupController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+   
+  
+public function index()
     {
-        //
+        $this->data['groups']=Group::all();
+        return view('pages.group.groups',$this->data);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+
+    public function groups_create()
     {
-        //
+       return view('pages.group.groups_create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+
+
+    public function groups_store(Request $request)
     {
-        //
+     $formData=$request->all();
+    if(Group::create($formData)){
+    
+    }
+     return redirect()->to('groups');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Group  $group
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Group $group)
+
+
+
+
+public function groups_edit($id)
     {
-        //
+
+        $group=Group::find($id);
+        return view('pages.group.groups_edit')->with('group',$group);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Group  $group
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Group $group)
+
+        public function groups_update(Request $request,$id)
     {
-        //
+ 
+        $group=Group::find($id);
+
+        $group->title=$request->title;
+       
+        $group->save();
+        return redirect()->route('groups');
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Group  $group
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Group $group)
+
+
+
+
+
+
+     public function groups_delete($id)
     {
-        //
+   if(Group::find($id)->delete()){
+
+    return redirect()->route('groups');
+   }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Group  $group
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Group $group)
-    {
-        //
-    }
-}
+ }

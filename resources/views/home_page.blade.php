@@ -1,6 +1,10 @@
 @extends('layouts.master')
 @section('title','Home Page')
 @section('main_content')
+
+
+
+
 <h2>Importent Links:</h2>
  <div class="container">
   <div class="row">
