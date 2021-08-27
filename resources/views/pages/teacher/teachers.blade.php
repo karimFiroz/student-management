@@ -69,13 +69,15 @@
                                             <td>{{$teacher->degree}}</td>
                                             <td>{{$teacher->address}}</td>
                                             <td>{{$teacher->mobile}}</td>
-                                            <td>
-                 <a href="{{route('teacher_edit',$teacher->id)}}"class="btn btn-success btn-sm">Edit</a> 
-         <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('teacher_delete',$teacher->id)}}" method="post">
-        @csrf
-        <input type="submit" class="btn btn-danger btn-sm" value="Delete"/></form> 
-               
-                                            </td>
+                                             <td>
+  <a href="{{route('teacher_edit',$teacher->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i>Edit</a>
+
+  <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('teacher_delete',$teacher->id)}}" method="post">
+  @csrf
+ <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>Delete</button>
+</form>
+                
+                      </td>
                                         </tr>
                                       @endforeach 
                                        

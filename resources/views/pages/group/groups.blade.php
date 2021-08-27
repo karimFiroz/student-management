@@ -14,7 +14,7 @@
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
-                                        <tr>
+                                        <tr><th>SL</th>
                                             <th>ID</th>
                                             <th>Title</th>
                                             <th class="text-right">Action</th>
@@ -22,16 +22,18 @@
                                         </tr>
                                     </thead>
                                     <tfoot>
-                                        <tr>
-                                            <th>id</th>
+                                        <tr><th>SL</th>
+                                            <th>ID</th>
                                             <th>Title</th>
                                             <th class="text-right">Action</th>
                                           
                                         </tr>
                                     </tfoot>
                                     <tbody>
+                    @php $i = 0; @endphp
                     @foreach($groups as $group)
-                                        <tr>
+                     @php $i++ @endphp
+                                        <tr><td>{{ $i }}</td>
                                             <td>{{$group->id}}</td>
                                             <td>{{$group->title}}</td>
                                           <td class="text-right">

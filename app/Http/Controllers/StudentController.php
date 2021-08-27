@@ -90,7 +90,7 @@ class StudentController extends Controller
     {//insery data into students table
         $student=Student::find($id);
 
-             $student->reg_id=$request->reg_id;
+        $student->reg_id=$request->reg_id;
         $student->roll=$request->roll;
         $student->name=$request->name;
         $student->fname=$request->fname;

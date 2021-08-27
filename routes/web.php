@@ -137,3 +137,122 @@ Route::post('/monthlyPay_store', [MonthlyPayController::class, 'monthlyPay_store
 Route::get('/monthlyPay_edit/{id}', [MonthlyPayController::class, 'monthlyPay_edit'])->name('monthlyPay_edit');
 Route::post('/monthlyPay_update/{id}', [MonthlyPayController::class, 'monthlyPay_update'])->name('monthlyPay_update');
 Route::post('/monthlyPay_delete/{id}', [MonthlyPayController::class, 'monthlyPay_delete'])->name('monthlyPay_delete');
+
+
+
+
+
+
+
+
+
+/**************************************
+*Admin Ragistration
+***************************************
+ // Route::get('/insert', function () {
+//  $data=[
+//     'admin_id'=>1,
+//     'group_id'=>1,
+//     'username'=>'karim',
+//     'email'=>'mdkarim66@yahoo.com',
+//     'password'=>'12344321',
+//     'phone'=>'01818-83 07 61',
+//     'address'=>'Rohanpur',
+//     'created_at'=>now(),
+//     'updated_at'=>now()
+//    ];
+//    Admin::insert($data);
+//    return "User Create Successfully";
+//    });
+Inversely:write function in Address.php
+****************************************
+ public function user(){
+        return $this->belongsTo(User::class);
+    }
+}
+using controller:check
+********************
+  public function one_to_one()
+    {
+        echo '<pre>';
+        $user=User::find(1);
+       echo $user->name.'<br>';
+       echo $user->email.'<br>';
+       echo $user->address->country.'<br>';
+    }
+/************************************
+*Delete Data
+*********************************
+Route::get('/delete/{id}', function ($id) {
+$user = User::findOrFail($id);
+        $user->delete();
+        return 'Deleted';
+	 });
+/******************************
+*Show Data/Read
+**************************
+Route::get('/show/{id}', function ($id) {
+ $user = User::find($id);
+        return $user;
+	 });
+**************************/
+/*************************
+*Edit Data/Update Data
+***************************
+Route::get('/edit/{id}', function ($id) {
+$user=User::find($id);
+        $user->name='SarkarFiroz';
+        $user->email='karim_firoz@yahoo.com';
+        $user->password='esif4@cc';
+        $user->save();
+        return 'Data Edited';
+	 });
+/***********************
+*Create/Insert data:
+***************************
+Route::get('/insert', function () {
+ $data=[
+    'user_id'=>3,
+    'state'=>'Chapai',
+    'city'=>'Chittagong',
+    'country'=>'Bangladesh'
+   ];
+   Address::insert($data);
+   return "User Create Successfully";
+	 });
+********************************
+Route::get('/orm', function () {
+$data=[
+'title'=>'Firoz Learning Home',
+'user_id'=>2,
+'description'=>'I am learning Laravel from Youtube tutorial',
+'status'=>0
+    ];
+DB::table('posts')->insert($data);
+//Post::create('$data');
+return 'Post inserted';
+	 });
+|
+
+|Insert
+Route::get('add-post', function() {
+		
+	$post = new Post();
+	$post->title = 'This is title';
+	$post->description = 'This is description';
+	$post->user_id = 1;
+	$post->status = 1;
+	
+	$post->save();
+
+});
+|Delete
+Route::get('delete-post', function() {
+	// $post = Post::findOrFail(4);
+	// $post->delete();
+
+	// Post::destroy([6, 7, 8]);
+
+	Post::where('status', 0)->delete();
+});
+*/

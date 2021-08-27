@@ -25,7 +25,7 @@
     
     <div class="row">
         
-<div class="col-md-2 margin-top-20">
+<div class="col-md-3 margin-top-20">
   <h4>Menu</h4>
 @include('partials.left-sidebar')
 </div>
@@ -33,7 +33,7 @@
 
 
 
-<div class="col-md-10">
+<div class="col-md-9">
 
 @yield('main_content')
 
