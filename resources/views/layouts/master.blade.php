@@ -35,6 +35,15 @@
 
 <div class="col-md-9">
 
+
+ @if(Session('message'))
+<div class="alert alert-success" role="alert">
+{{Session('message')}}
+</div>
+@endif
+
+
+
 @yield('main_content')
 
   </div>

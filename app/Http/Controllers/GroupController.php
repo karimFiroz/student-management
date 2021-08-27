@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Session;
 use App\Models\Group;
 use Illuminate\Http\Request;
 use DB;
@@ -32,7 +32,7 @@ public function index()
     {
      $formData=$request->all();
     if(Group::create($formData)){
-    
+     Session::flash('message','Group created successfully!');
     }
      return redirect()->to('groups');
     }
@@ -69,7 +69,7 @@ public function groups_edit($id)
      public function groups_delete($id)
     {
    if(Group::find($id)->delete()){
-
+Session::flash('message','Group Deleted successfully!');
     return redirect()->route('groups');
    }
     }

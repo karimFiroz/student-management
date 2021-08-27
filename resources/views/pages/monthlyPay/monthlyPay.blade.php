@@ -92,7 +92,7 @@
          ?>
                                              </td>
                        <td>
-  <a href="{{route('monthlyPay_edit',$monthlyPay->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i>Edit</a>
+  <a href="{{route('monthlyPay_edit', $monthlyPay->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i>Edit</a>
 
   <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('monthlyPay_delete',$monthlyPay->id)}}" method="post">
   @csrf

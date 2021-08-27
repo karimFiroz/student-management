@@ -51,9 +51,9 @@
                                             <td>{{$image->image}}</td>
                                             
                                              <td>
-  <a href="{{route('image_edit',$image->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i>Edit</a>
+  <a href="{{route('image_edit', $image->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i>Edit</a>
 
-  <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('image_delete',$image->id)}}" method="post">
+  <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('image_delete', $image->id)}}" method="post">
   @csrf
  <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>Delete</button>
 </form>

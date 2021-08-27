@@ -3,7 +3,6 @@
 @section('main_content')
 
 
-
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -13,7 +12,7 @@
   
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
+                                     <thead>
                                         <tr><th>SL</th>
                                             <th>ID</th>
                                             <th>Title</th>
@@ -38,7 +37,7 @@
                                             <td>{{$group->title}}</td>
                                           <td class="text-right">
                                             <a href="{{route('groups_edit',$group->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i>Edit</a>
-                                            <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('groups_delete',$group->id)}}" method="post">
+                                            <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('groups_delete', $group->id)}}" method="post">
                                             @csrf
                             <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>Delete</button>
                                             </form>

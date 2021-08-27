@@ -85,9 +85,9 @@
                                              </td>
 
                                             <td>
-  <a href="{{route('student_edit',$student->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i>Edit</a>
+  <a href="{{route('student_edit', $student->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i>Edit</a>
 
-  <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('student_delete',$student->id)}}" method="post">
+  <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('student_delete', $student->id)}}" method="post">
   @csrf
  <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>Delete</button>
 </form>
