@@ -65,10 +65,10 @@
                                             <td>{{$admin->password}}</td>
                                             <td>{{$admin->phone}}</td>
                                             <td>
-                <a href="{{route('admin_edit', $admin->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i>Edit</a> 
+                <a href="{{route('admin_edit', $admin->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a> 
        <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('admin_delete',$admin->id)}}" method="post">
         @csrf
-         <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>Delete</button>
+         <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
         </form>
                                             </td>
                                         </tr>

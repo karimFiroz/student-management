@@ -14,7 +14,7 @@
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title">Students Monthly Payment</h3>
-  <a href="{{route('monthlyPay_create')}}"class="btn btn-info btn-sm">MonthlyPay_create</a>
+  <center><a href="{{route('monthlyPay_create')}}"class="btn btn-info btn-sm"><i class="fa fa-plus"></i></a></center>
 
                 <a href="{{route('file-upload')}}"target=" _blank">Upload</a>|
     <a href="{{route('delete-file')}}">Delete</a>
@@ -92,11 +92,11 @@
          ?>
                                              </td>
                        <td>
-  <a href="{{route('monthlyPay_edit', $monthlyPay->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i>Edit</a>
+  <a href="{{route('monthlyPay_edit', $monthlyPay->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
 
   <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('monthlyPay_delete',$monthlyPay->id)}}" method="post">
   @csrf
- <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>Delete</button>
+ <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
 </form>
                 
                       </td>

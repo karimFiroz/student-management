@@ -34,7 +34,17 @@ Route::get('/', function () {
 
 |
 */
+//Dashboard
 
+Route::get('/dashboard', [SuperAdminController::class, 'index'])->name('dashboard');
+Route::get('/dashboardv2', [SuperAdminController::class, 'dashboardv2'])->name('dashboardv2');
+Route::get('/dashboardv3', [SuperAdminController::class, 'dashboardv3'])->name('dashboardv3');
+
+
+
+
+
+//groups
 
 Route::get('/groups', [GroupController::class, 'index'])->name('groups');
 Route::get('/groups_create', [GroupController::class, 'groups_create'])->name('groups_create');
@@ -65,9 +75,7 @@ Route::get('/welcome', [PagesController::class, 'welcome'])->name('welcome');
 
 
 
-//Dashboard
 
-Route::get('/dashboard', [SuperAdminController::class, 'index'])->name('dashboard');
 
 //Authendicate
 Route::get('/index', [Auth\LoginController::class, 'index'])->name('index');

@@ -56,7 +56,7 @@
             <li><a class="dropdown-item" href="https://www.youtube.com/watch?v=iLAKRRL285k&list=PLJ-3-UkU_it-1zhisUmSicBi4i_fvn3uL&ab_channel=TalhaTraining"target="_blank">Talha training laravel</a></li>
             
             
-            <li><a class="dropdown-item" href="https://www.youtube.com/c/iTuberlogy/videos"target="_blank">BD Darpon</a></li> 
+            
            
            
             <li><a class="dropdown-item" href="https://www.canva.com/design/DAECwzwq0N0/8RQ-2nTwXiD0OxlJJ2naZg/edit?category=tACZCnmCPGY"target="_blank">Canva</a></li>
@@ -206,6 +206,9 @@
             
           
           <ul>
+
+            <li><a class="dropdown-item" href="https://www.youtube.com/c/iTuberlogy/videos"target="_blank">BD Darpon</a></li> 
+            
             <li><a class="dropdown-item" href="https://www.youtube.com/channel/UCd0sgSradUWXA02jLRDPOLw"target="_blank">Awaz-1</a></li>
             
             

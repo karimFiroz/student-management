@@ -10,7 +10,7 @@
                        
                         <div class="card mb-4">
                             <div class="card-body">
-    <center><a class="btn btn-info" href="{{route('user_create')}}"><strong> Create User</strong></a></center>
+    <center><a class="btn btn-info" href="{{route('user_create')}}"><strong><i class="fa fa-plus"></i></strong></a></center>
                                
                                 
                             </div>
@@ -68,10 +68,10 @@
                                             <td>{{$user->address}}</td>
                                             <td>{{$user->mobile}}</td>
                                             <td>
-        <a href="{{route('user_edit',$user->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i>Edit</a> 
+        <a href="{{route('user_edit',$user->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a> 
         <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('user_delete',$user->id)}}" method="post">
         @csrf
-      <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i>Delete</button>
+      <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
         </form>
                                             </td>
                                         </tr>

@@ -13,13 +13,34 @@ class SuperAdminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
    public function index()
     {
          
         $this->authCheck();
     
-         return view('pages.superAdmin.dashboard');
+         return view('pages.superAdmin.dashboardv1');
     }
+
+
+  public function dashboardv2()
+    {
+         
+        $this->authCheck();
+    
+         return view('pages.superAdmin.dashboardv2');
+    }
+
+
+  public function dashboardv3()
+    {
+         
+        $this->authCheck();
+    
+         return view('pages.superAdmin.dashboardv3');
+    }
+
 
 private function authCheck(){
 
