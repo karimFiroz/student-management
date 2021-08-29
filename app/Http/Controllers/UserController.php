@@ -1,14 +1,20 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Carbon\Carbon;
+use App\Http\Requests\CreateUserRequest;
+use Illuminate\Database\Eloquent\Model;
+use Collective\Html\Eloquent\FormAccessible;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Group;
+
+
 
 class UserController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * Display a listing of the resource. 
      *
      * @return \Illuminate\Http\Response
      */
@@ -25,20 +31,28 @@ class UserController extends Controller
      */
       public function user_create()
     {
-        return view('pages.user.user_create');
+        
+          $this->data['groups']=Group::arrayForSelect();
+       
+      
+        return view('pages.user.user_create',$this->data);
     }
 
     
     public function user_store(Request $request)
     {
+
+
         //Check validation
         $this->validate($request,[
-    
-'name'=>'required|string|max:15',
-'password'=>'required|min:6',
-'email'=> 'required|email'
-
+            'group_id'=>'required',
+            'name'=>'required|string|max:15',
+            'password'=>'required|min:6',
+            'phone'=>'required|numeric|unique:users',
+            'email'=>'nullable|email|unique:users'
         ]);
+
+
         $user=new User();
          $user->user_id=$request->user_id;
          $user->group_id=$request->group_id;

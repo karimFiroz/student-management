@@ -17,16 +17,15 @@
                             <div class="card-body">
 <form action="{{route('student_store')}}" method="post" class="needs-validation" novalidate>
 
-
-@if($errors->any())
-	<div class="alert alert-danger">
-		<ul>
-			@foreach($errors->all as $error)
-			<li>{{$error}}</li>
-			@endforeach
-		</ul>
-	</div>
-	@endif
+@if ($errors->any())
+      <div class="alert alert-danger">
+          <ul>
+              @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+      </div>
+  @endif
 @csrf
 
   <div class="form-group">

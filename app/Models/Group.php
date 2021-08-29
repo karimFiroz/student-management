@@ -8,5 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Group extends Model
 {
     use HasFactory;
-     public $fillable=['title'];
+     protected $fillable=['title'];
+
+     /**
+     *Geting array for Select Option
+     **/
+     public static function arrayForSelect(){
+     		$arr=[];
+    	$groups=Group::all();
+    	foreach($groups as $group){
+    		$arr[$group->id]=$group->title;
+    	}
+    	return $arr;
+     }
 }
