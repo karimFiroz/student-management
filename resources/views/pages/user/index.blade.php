@@ -25,6 +25,7 @@
                                 <table  class="table table-responsive table-hover">
                                     <thead>
                                         <tr>
+                                             <th>Action</th>
                                             <th>SN</th>
                                             <th>ID</th>
                                             <th>User_ID</th>
@@ -35,11 +36,12 @@
                                             <th>Password</th>
                                             <th>Address</th>
                                             <th>Mobile</th>
-                                            <th>Action</th>
+                                           
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
+                                            <th>Action</th>
                                            <th>SN</th>
                                             <th>ID</th>
                                             <th>User_ID</th>
@@ -50,7 +52,7 @@
                                             <th>Password</th>
                                             <th>Address</th>
                                             <th>Mobile</th>
-                                            <th>Action</th>
+                                            
                                         </tr>
                                     </tfoot>
                                     
@@ -59,6 +61,17 @@
                                         @foreach($users as $user)
                                          @php $i++ @endphp
                                         <tr>
+                                            <td>
+       
+
+             <a href="{{route('user_edit',$user->id)}}"class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a> 
+        <a href="{{route('user_show',$user->id)}}"class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
+        <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('user_delete',$user->id)}}" method="post">
+        @csrf
+      <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+        </form>
+                                            </td>
+                                             
                                             <td>{{ $i }}</td>
                                             <td>{{$user->id}}</td>
                                             <td>{{$user->user_id}}</td>
@@ -68,17 +81,8 @@
                                             <td>{{$user->email}}</td>
                                             <td>{{$user->password}}</td>
                                             <td>{{$user->address}}</td>
-                                            <td>{{$user->mobile}}</td>
-                                            <td>
-       
-
-             <a href="{{route('user_edit',$user->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a> 
-        <a href="{{route('user_show',$user->id)}}"class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
-        <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('user_delete',$user->id)}}" method="post">
-        @csrf
-      <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-        </form>
-                                            </td>
+                                           <td>{{$user->mobile}}</td>
+                                            
                                         </tr>
                                       @endforeach 
                                        

@@ -23,6 +23,7 @@ use App\Http\Controllers\RegistrationController;
 
 
 use App\Models\Group;
+use App\Models\Category;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -36,21 +37,25 @@ Route::get('/', function () {
 */
 
 
-Route::get('/show', function () {
-    return view('pages.user.show');
-});
 
 
 
 
+
+
+
+//category
+
+Route::get('/category', [CategoryController::class, 'index'])->name('category');
+Route::get('/category_create', [CategoryController::class, 'category_create'])->name('category_create');
+Route::post('/category_store', [CategoryController::class, 'category_store'])->name('category_store');
+Route::get('/category_edit/{id}', [CategoryController::class, 'category_edit'])->name('category_edit');
+Route::post('/category_update/{id}', [CategoryController::class, 'category_update'])->name('category_update');
+Route::post('/category_delete/{id}', [CategoryController::class, 'category_delete'])->name('category_delete');
 
 //Dashboard
 
 Route::get('/dashboard', [SuperAdminController::class, 'index'])->name('dashboard');
-
-
-
-
 
 
 //groups

@@ -11,14 +11,15 @@
                
 <div class="row clearfix page_header">
     <div class="col-md-12 text-right">
-    <center><a class="btn btn-info" href="{{route('user_create')}}"><strong><i class="fa fa-plus"></i>New Sale</strong></a></center>
-    <center><a class="btn btn-primary" href="{{route('user_create')}}"><strong><i class="fa fa-plus"></i>New purchase</strong></a></center>
-    <center><a class="btn btn-info" href="{{route('user_create')}}"><strong><i class="fa fa-plus"></i>New Payment</strong></a></center>
+    <a class="btn btn-info" href="{{route('user_create')}}"><strong><i class="fa fa-plus"></i>New Sale</strong></a>
+    <a class="btn btn-primary" href="{{route('user_create')}}"><strong><i class="fa fa-plus"></i>New purchase</strong></a>
+    <a class="btn btn-success" href="{{route('user_create')}}"><strong><i class="fa fa-plus"></i>New Payment</strong></a>
+    <a class="btn btn-secondary" href="{{route('user_create')}}"><strong><i class="fa fa-plus"></i>New Receipt</strong></a>
                         <h2 class="mt-4"align="center">User show</h2>
 
                         <div class="card mb-12">
                             <div class="card-body">
-     <center><a class="btn btn-info" href="{{route('users')}}"><strong><i class="fa fa-arrow-left"></i>Back</strong></a></center>
+     <center><a class="btn btn-info" href="{{route('users')}}"><strong><i class="fa fa-arrow-left" aria-hidden="true"></i>Back</strong></a></center>
                                
                               <div class="card shadow mb-12">
                         <div class="card-header py-12">
@@ -30,7 +31,7 @@
 
 
 
-       <table  class="table table-responsive table-hover" >
+       <table  class="table table-responsive table-hover" table-striped>
                                     
                                       
 
