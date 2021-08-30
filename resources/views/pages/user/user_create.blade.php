@@ -10,6 +10,9 @@
  <div class="container-fluid px-4">
                         <div style="padding: 30px 60px;" class="card mb-4">
                             <div class="card-body">
+
+
+
             @if ($errors->any())
       <div class="alert alert-danger">
           <ul>
@@ -32,6 +35,7 @@
 
   <div class="form-group">
     <label for="user_id">.User_ID<span class="text-danger">*</span>:</label>
+    
     <input type="text" class="form-control" id="user_id" placeholder="Enter User_ID" name="user_id">
   </div>
 
@@ -46,7 +50,7 @@
   <div class="form-group">
     <label for="group">3.Group<span class="text-danger">*</span>:</label>
 
- {{Form::select('group_id',$groups,NULL,['class'=>'form-control','id'=>'group','placeholder'=>'Enter Group'])}}
+ {{Form::select('group_id',$groups,NULL,['class'=>'form-control','id'=>'group','placeholder'=>'Select Group'])}}
   </div>
 
 

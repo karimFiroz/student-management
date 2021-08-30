@@ -2,6 +2,13 @@
 @section('title','All Students')
 @section('main_content')
 
+
+
+ @if(Session('message'))
+<div class="alert alert-success" role="alert">
+{{Session('message')}}
+</div>
+@endif
      <main>
                     <div class="container-fluid px-4">
                         <h2 class="mt-4"align="center">Student Registration</h2>
@@ -16,11 +23,12 @@
                             </div>
                        
                         </div>
-                        <div class="card mb-4">
-                            <div class="card-header">
-                               
-                            </div>
-                            <div class="card-body">
+                               <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
                                 <table  class="table table-responsive table-hover">
                                     <thead>
                                         <tr>

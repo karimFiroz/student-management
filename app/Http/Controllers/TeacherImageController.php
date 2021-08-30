@@ -42,6 +42,7 @@ class TeacherImageController extends Controller
         $image->image=$request->image;
         
        $image->save();
+        Session::flash('message','User created successfully');
         return redirect()->route('images');
     }
 

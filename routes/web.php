@@ -34,11 +34,20 @@ Route::get('/', function () {
 
 |
 */
+
+
+Route::get('/table', function () {
+    return view('pages.superAdmin.table');
+});
+
+
+
+
+
 //Dashboard
 
 Route::get('/dashboard', [SuperAdminController::class, 'index'])->name('dashboard');
-Route::get('/dashboardv2', [SuperAdminController::class, 'dashboardv2'])->name('dashboardv2');
-Route::get('/dashboardv3', [SuperAdminController::class, 'dashboardv3'])->name('dashboardv3');
+
 
 
 

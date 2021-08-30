@@ -20,26 +20,10 @@ class SuperAdminController extends Controller
          
         $this->authCheck();
     
-         return view('pages.superAdmin.dashboardv1');
+         return view('pages.superAdmin.dashboard');
     }
 
 
-  public function dashboardv2()
-    {
-         
-        $this->authCheck();
-    
-         return view('pages.superAdmin.dashboardv2');
-    }
-
-
-  public function dashboardv3()
-    {
-         
-        $this->authCheck();
-    
-         return view('pages.superAdmin.dashboardv3');
-    }
 
 
 private function authCheck(){

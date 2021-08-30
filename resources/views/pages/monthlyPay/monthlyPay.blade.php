@@ -2,6 +2,15 @@
 @section('title','Monthly Pay')
 @section('main_content')
 
+
+
+
+
+ @if(Session('message'))
+<div class="alert alert-success" role="alert">
+{{Session('message')}}
+</div>
+@endif
         <!DOCTYPE html>
 <html lang="en">
 <head>

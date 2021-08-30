@@ -8,7 +8,7 @@ use Collective\Html\Eloquent\FormAccessible;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Group;
-
+use Illuminate\Support\Facades\Session;
 
 
 class UserController extends Controller
@@ -32,7 +32,8 @@ class UserController extends Controller
       public function user_create()
     {
         
-          $this->data['groups']=Group::arrayForSelect();
+    $this->data['groups']=Group::arrayForSelect();
+          
        
       
         return view('pages.user.user_create',$this->data);
@@ -42,13 +43,14 @@ class UserController extends Controller
     public function user_store(Request $request)
     {
 
-
+        
         //Check validation
         $this->validate($request,[
+            'user_id'=>'required',
             'group_id'=>'required',
             'name'=>'required|string|max:15',
             'password'=>'required|min:6',
-            'phone'=>'required|numeric|unique:users',
+            'mobile'=>'required|numeric|unique:users',
             'email'=>'nullable|email|unique:users'
         ]);
 
@@ -63,6 +65,7 @@ class UserController extends Controller
         $user->address=$request->address;
         $user->mobile=$request->mobile;
         $user->save();
+        Session::flash('message','User created successfully');
         return redirect()->route('index');
     }
 
