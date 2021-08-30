@@ -70,7 +70,10 @@
                                             <td>{{$user->address}}</td>
                                             <td>{{$user->mobile}}</td>
                                             <td>
-        <a href="{{route('user_edit',$user->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a> 
+       
+
+             <a href="{{route('user_edit',$user->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a> 
+        <a href="{{route('user_show',$user->id)}}"class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
         <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('user_delete',$user->id)}}" method="post">
         @csrf
       <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>

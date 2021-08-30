@@ -36,8 +36,8 @@ Route::get('/', function () {
 */
 
 
-Route::get('/table', function () {
-    return view('pages.superAdmin.table');
+Route::get('/show', function () {
+    return view('pages.user.show');
 });
 
 
@@ -125,6 +125,8 @@ Route::post('/user_store', [UserController::class, 'user_store'])->name('user_st
 Route::get('/user_edit/{id}', [UserController::class, 'user_edit'])->name('user_edit');
 Route::post('/user_update/{id}', [UserController::class, 'user_update'])->name('user_update');
 Route::post('/user_delete/{id}', [UserController::class, 'user_delete'])->name('user_delete');
+
+Route::get('/user_show/{id}', [UserController::class, 'user_show'])->name('user_show');
 
 
 

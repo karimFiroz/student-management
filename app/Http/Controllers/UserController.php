@@ -75,9 +75,10 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function user_show($id)
     {
-        //
+    $this->data['user']=User::find($id);
+    return view('pages.user.show',$this->data); 
     }
 
     /**
