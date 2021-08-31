@@ -32,10 +32,11 @@
               <div class="card-body table-responsive p-0" style="height: 300px;">
                 <table class="table table-head-fixed text-nowrap">
                   <thead>
-                    <tr>
-                                       <th>SN</th>
-                                       <th>ID</th>
-                                       <th>reg_id</th>
+                               <tr>
+                                        <th>Action</th>
+                                        <th>SN</th>
+                                        <th>ID</th>
+                                        <th>reg_id</th>
                                         <th>Date</th>
                                         <th>Section</th>
                                         <th>Roll</th>
@@ -56,7 +57,7 @@
                                         <th>Others</th>
                                         <th>Total</th>
                                         <th>pic</th>
-                                        <th>Action</th>
+                                        
                     </tr>
                   </thead>
 
@@ -71,6 +72,15 @@
                                         @foreach($monthlyPays as $monthlyPay)
                                          @php $i++ @endphp
                     <tr>
+                      <td>
+  <a href="{{route('monthlyPay_edit', $monthlyPay->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
+
+  <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('monthlyPay_delete',$monthlyPay->id)}}" method="post">
+  @csrf
+ <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+</form>
+                
+                      </td>
                       <td>{{ $i }}</td>
                       <td>{{ $monthlyPay->id }}</td>
                       <td>{{ $monthlyPay->reg_id }}</td>
@@ -100,15 +110,7 @@
      echo "<img src='storage/app/{{ $monthlyPay->pic }}' height='100' width='100'>";
          ?>
                                              </td>
-                       <td>
-  <a href="{{route('monthlyPay_edit', $monthlyPay->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
-
-  <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('monthlyPay_delete',$monthlyPay->id)}}" method="post">
-  @csrf
- <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-</form>
-                
-                      </td>
+                       
       
                  </tr>
                     @endforeach
@@ -117,6 +119,7 @@
                    
                     <tfoot>
                             <tr>
+                                        <th>Action</th>
                                         <th>SN</th>
                                         <th>ID</th>
                                         <th>reg_id</th>
@@ -140,7 +143,7 @@
                                         <th>Others</th>
                                         <th>Total</th>
                                         <th>pic</th>
-                                        <th>Action</th>
+                                       
                                   </tr>
                                 </tfoot>  
                     

@@ -26,7 +26,8 @@
                                 <table  class="table table-responsive table-hover">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th>Action</th>
+                                            <thSL</th>
                                             <th>ID</th>
                                             <th>Teacher_ID</th>
                                             <th>Index_ID</th>
@@ -37,12 +38,13 @@
                                             <th>Degree</th>
                                             <th>Address</th>
                                             <th>Mobile</th>
-                                            <th>Action</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>#</th>
+                                             <th>Action</th>
+                                            <th>SL</th>
                                             <th>ID</th>
                                             <th>Teacher_ID</th>
                                             <th>Index_ID</th>
@@ -53,7 +55,7 @@
                                             <th>Degree</th>
                                             <th>Address</th>
                                             <th>Mobile</th>
-                                            <th>Action</th>
+                                           
                                         </tr>
                                     </tfoot>
                                     
@@ -62,6 +64,15 @@
                                         @foreach($teachers as $teacher)
                                          @php $i++ @endphp
                                         <tr>
+                                             <td>
+  <a href="{{route('teacher_edit',$teacher->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
+
+  <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('teacher_delete',$teacher->id)}}" method="post">
+  @csrf
+ <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+</form>
+                
+                      </td>
                                             <td>{{ $i }}</td>
                                             <td>{{$teacher->id}}</td>
                                             <td>{{$teacher->teacher_id}}</td>
@@ -73,15 +84,7 @@
                                             <td>{{$teacher->degree}}</td>
                                             <td>{{$teacher->address}}</td>
                                             <td>{{$teacher->mobile}}</td>
-                                             <td>
-  <a href="{{route('teacher_edit',$teacher->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
-
-  <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('teacher_delete',$teacher->id)}}" method="post">
-  @csrf
- <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-</form>
-                
-                      </td>
+                                            
                                         </tr>
                                       @endforeach 
                                        

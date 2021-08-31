@@ -21,7 +21,8 @@
                                 <table  class="table table-responsive table-hover">
                                     <thead>
                                         <tr>
-                                            <th>#</th>
+                                            <th>Action</th>
+                                            <th>SL</th>
                                             <th>ID</th>
                                             <th>Admin_ID</th>
                                             <th>Group_ID</th>
@@ -30,12 +31,13 @@
                                              <th>Address</th>
                                             <th>Password</th>
                                             <th>Phone</th>
-                                            <th>Action</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>#</th>
+                                            <th>Action</th>
+                                            <th>SL</th>
                                             <th>ID</th>
                                             <th>Admin_ID</th>
                                             <th>Group_ID</th>
@@ -44,7 +46,7 @@
                                              <th>Address</th>
                                             <th>Password</th>
                                             <th>Phone</th>
-                                            <th>Action</th>
+                                            
                                         </tr>
                                     </tfoot>
                                     
@@ -53,6 +55,13 @@
                                         @foreach($admins as $admin)
                                          @php $i++ @endphp
                                         <tr>
+                                            <td>
+                <a href="{{route('admin_edit', $admin->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a> 
+       <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('admin_delete',$admin->id)}}" method="post">
+        @csrf
+         <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
+        </form>
+                                            </td>
                                             <td>{{ $i }}</td>
                                             <td>{{$admin->id}}</td>
                                             <td>{{$admin->admin_id}}</td>
@@ -62,13 +71,7 @@
                                             <td>{{$admin->address}}</td>
                                             <td>{{$admin->password}}</td>
                                             <td>{{$admin->phone}}</td>
-                                            <td>
-                <a href="{{route('admin_edit', $admin->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a> 
-       <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('admin_delete',$admin->id)}}" method="post">
-        @csrf
-         <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
-        </form>
-                                            </td>
+                                            
                                         </tr>
 
                                       @endforeach 

@@ -38,10 +38,15 @@ Route::get('/', function () {
 
 
 
+//products
 
 
-
-
+Route::get('/product', [ProductController::class, 'index'])->name('product');
+Route::get('/product_create', [ProductController::class, 'product_create'])->name('product_create');
+Route::post('/product_store', [ProductController::class, 'product_store'])->name('product_store');
+Route::get('/product_edit/{id}', [ProductController::class, 'product_edit'])->name('product_edit');
+Route::post('/product_update/{id}', [ProductController::class, 'product_update'])->name('product_update');
+Route::post('/product_delete/{id}', [ProductController::class, 'product_delete'])->name('product_delete');
 
 
 //category

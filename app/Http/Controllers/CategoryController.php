@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Requests\CategoryRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
@@ -28,6 +28,13 @@ public function index()
 
     public function category_store(Request $request)
     {
+
+
+           //Check validation
+        $this->validate($request,[
+            'title'=>'string|required'
+        ]);
+
      $formData=$request->all();
     if(Category::create($formData)){
      Session::flash('message','Category created successfully!');

@@ -1,5 +1,5 @@
  @extends('layouts.master')
-@section('title','All Students')
+@section('title','All products')
 @section('main_content')
 
 
@@ -11,11 +11,11 @@
 @endif
      <main>
                     <div class="container-fluid px-4">
-                        <h2 class="mt-4"align="center">Student Registration</h2>
+                        <h2 class="mt-4"align="center">Product Registration</h2>
                    
                         <div class="card mb-4">
                             <div class="card-body">
-            <center><a class="btn btn-info" href="{{route('student_create')}}"><strong> <i class="fa fa-plus"></i></strong></a></center>
+            <center><a class="btn btn-info" href="{{route('product_create')}}"><strong> <i class="fa fa-plus"></i></strong></a></center>
                             
     <a href="{{route('file-upload')}}"target=" _blank">Upload</a>|
     <a href="{{route('delete-file')}}">Delete</a>
@@ -35,16 +35,12 @@
                                              <th>Action</th>
                                             <th>SN</th>
                                             <th>ID</th>
-                                            <th>Reg_ID</th>
-                                            <th>Roll</th>
-                                            <th>Name</th>
-                                            <th>Fname</th>
-                                            <th>Mname</th>
-                                            <th>Department</th>
-                                            <th>Info</th>
-                                            <th>Academy</th>
-                                            <th>password</th>
-                                            <th>Mobile</th>
+                                            <th>Product_ID</th>
+                                            <th>Category_ID</th>
+                                            <th>Title</th>
+                                            <th>Description</th>
+                                            <th>Cost_Price</th>
+                                            <th>Price</th>
                                             <th>image</th>
                                            
                                         </tr>
@@ -52,18 +48,14 @@
                                     <tfoot>
                                         <tr>
                                             <th>Action</th>
-                                           <th>SN</th>
+                                            <th>SN</th>
                                             <th>ID</th>
-                                            <th>Reg_ID</th>
-                                            <th>Roll</th>
-                                            <th>Name</th>
-                                            <th>Fname</th>
-                                            <th>Mname</th>
-                                            <th>Department</th>
-                                            <th>Info</th>
-                                            <th>Academy</th>
-                                            <th>password</th>
-                                            <th>Mobile</th>
+                                            <th>Product_ID</th>
+                                            <th>Category_ID</th>
+                                            <th>Title</th>
+                                            <th>Description</th>
+                                            <th>Cost_Price</th>
+                                            <th>Price</th>
                                             <th>image</th>
                                             
                                         </tr>
@@ -71,35 +63,33 @@
                                     
                                     <tbody>
                                         @php $i = 0; @endphp
-                                        @foreach($students as $student)
+                                        @foreach($products as $product)
                                          @php $i++ @endphp
                                         <tr>
                                             <td>
-  <a href="{{route('student_edit', $student->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
+  <a href="{{route('product_edit', $product->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
 
-  <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('student_delete', $student->id)}}" method="post">
+  <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('product_delete', $product->id)}}" method="post">
   @csrf
  <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>
 </form>
                 
-                      </td>
+                                        </td>
                                             <td>{{ $i }}</td>
-                                            <td>{{$student->id}}</td>
-                                            <td>{{$student->reg_id}}</td>
-                                            <td>{{$student->roll}}</td>
-                                            <td>{{$student->name}}</td>
-                                            <td>{{$student->fname}}</td>
-                                            <td>{{$student->mname}}</td>
-                                            <td>{{$student->department}}</td>
-                                            <td>{{$student->info}}</td>
-                                            <td>{{$student->academy}}</td>
-                                            <td>{{$student->password}}</td>
-                                            <td>{{$student->mobile}}</td>
+                                            <td>{{$product->id}}</td>
+                                            <td>{{$product->product_id}}</td>
+                                            <td>{{$product->category_id}}</td>
+                                            <td>{{$product->title}}</td>
+                                            <td>{{$product->description}}</td>
+                                            <td>{{$product->cost_price}}</td>
+                                            <td>{{$product->price}}</td>
+                                            <td>{{$product->image}}</td>
+                                          
                                             
                                             <td>
      <?php
                                                 
-     echo "<img src='storage/app/{{$student->image}}' height='100' width='100'>";
+     echo "<img src='storage/app/{{$product->image}}' height='100' width='100'>";
          ?>
                                              </td>
 

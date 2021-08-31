@@ -200,7 +200,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                      new
+                      <a href="{{route('product')}}"class="btn btn-success btn=sm">Products</a>
                                                 </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
                                         </div>
@@ -221,7 +221,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                      <h3>Receipt</h3>
+                    new
                                                 </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
                                         </div>

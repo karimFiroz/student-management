@@ -1,7 +1,11 @@
  @extends('layouts.master')
 @section('title','category')
 @section('main_content')
-
+ @if(Session('message'))
+<div class="alert alert-success" role="alert">
+{{Session('message')}}
+</div>
+@endif
 <h2>Categories</h2>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
