@@ -11,7 +11,7 @@
 @endif
      <main>
                     <div class="container-fluid px-4">
-                        <h2 class="mt-4"align="center">Product Registration</h2>
+                        <h2 class="mt-4"align="center">All Products</h2>
                    
                         <div class="card mb-4">
                             <div class="card-body">
@@ -68,7 +68,7 @@
                                         <tr>
                                             <td>
   <a href="{{route('product_edit', $product->id)}}"class="btn btn-success btn-sm"><i class="fa fa-edit"></i></a>
-
+<a href="{{route('product_show',$product->id)}}"class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
   <form class="form-inline"onclick="return confirm('Are you sure delete? ')" action="{{route('product_delete', $product->id)}}" method="post">
   @csrf
  <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></button>

@@ -47,7 +47,7 @@ Route::post('/product_store', [ProductController::class, 'product_store'])->name
 Route::get('/product_edit/{id}', [ProductController::class, 'product_edit'])->name('product_edit');
 Route::post('/product_update/{id}', [ProductController::class, 'product_update'])->name('product_update');
 Route::post('/product_delete/{id}', [ProductController::class, 'product_delete'])->name('product_delete');
-
+Route::get('/product_show/{id}', [ProductController::class, 'product_show'])->name('product_show');
 
 //category
 
