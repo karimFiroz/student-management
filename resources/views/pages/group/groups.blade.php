@@ -2,7 +2,11 @@
 @section('title','groups')
 @section('main_content')
 
-
+ @if(Session('message'))
+<div class="alert alert-success" role="alert">
+{{Session('message')}}
+</div>
+@endif
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">

@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -17,6 +17,7 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->integer('product_id');
             $table->foreignId('category_id');
+            $table->string('category');
             $table->string('title');
             $table->text('description')->nullable();
             $table->double('cost_price')->nullable();

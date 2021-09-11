@@ -13,7 +13,7 @@ class PagesController extends Controller
      */
     public function index()
     {
-       return view('home_page');
+       return view('pages.pages.home_page');
     }
 
 

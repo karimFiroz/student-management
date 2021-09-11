@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use Carbon\Carbon;
-use App\Http\Requests\CreateUserRequest;
+use App\Http\Requests\UserRequest;
 use Illuminate\Database\Eloquent\Model;
 use Collective\Html\Eloquent\FormAccessible;
 use Illuminate\Http\Request;
@@ -18,7 +18,7 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-   public function index()
+   public function users()
     {
         $users=User::orderBy('id','desc')->get();
         return view('pages.user.index')->with('users', $users);
@@ -47,6 +47,7 @@ class UserController extends Controller
         //Check validation
         $this->validate($request,[
             'user_id'=>'required',
+            'admin_id'=>'required',
             'group_id'=>'required',
             'name'=>'required|string|max:15',
             'password'=>'required|min:6',
@@ -57,6 +58,7 @@ class UserController extends Controller
 
         $user=new User();
          $user->user_id=$request->user_id;
+         $user->admin_id=$request->admin_id;
          $user->group_id=$request->group_id;
          $user->group=$request->group;
          $user->name=$request->name;
@@ -103,6 +105,7 @@ class UserController extends Controller
       {
         $user=User::find($id);
         $user->user_id=$request->user_id;
+        $user->admin_id=$request->admin_id;
         $user->group_id=$request->group_id;
          $user->group=$request->group;
         $user->name=$request->name;

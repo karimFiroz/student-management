@@ -45,12 +45,12 @@
 
   <div class="form-group">
     <label for="uname">5.Email:</label>
-    <input type="text" class="form-control" id="email" value="{{$teacher->mname}}"  placeholder="Enter Mother's Name" name="email">
+    <input type="text" class="form-control" id="email" value="{{$teacher->mname}}"  placeholder="Enter Email" name="email">
   </div>
 
 <div class="form-group">
     <label for="uname">6.Qualification:</label>
-    <input type="text" class="form-control" value="{{$teacher->degree}}"  id="degree" placeholder="Enter Department" name="degree">
+    <input type="text" class="form-control" value="{{$teacher->degree}}"  id="degree" placeholder="Enter Qualification" name="degree">
   </div>
 
 

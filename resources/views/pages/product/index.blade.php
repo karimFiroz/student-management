@@ -37,6 +37,7 @@
                                             <th>ID</th>
                                             <th>Product_ID</th>
                                             <th>Category_ID</th>
+                                            <th>Category</th>
                                             <th>Title</th>
                                             <th>Description</th>
                                             <th>Cost_Price</th>
@@ -52,6 +53,7 @@
                                             <th>ID</th>
                                             <th>Product_ID</th>
                                             <th>Category_ID</th>
+                                            <th>Category</th>
                                             <th>Title</th>
                                             <th>Description</th>
                                             <th>Cost_Price</th>
@@ -79,6 +81,7 @@
                                             <td>{{$product->id}}</td>
                                             <td>{{$product->product_id}}</td>
                                             <td>{{$product->category_id}}</td>
+                                            <td>{{$product->category}}</td>
                                             <td>{{$product->title}}</td>
                                             <td>{{$product->description}}</td>
                                             <td>{{$product->cost_price}}</td>

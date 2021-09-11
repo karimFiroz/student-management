@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Teacher_image;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Session;
 class TeacherImageController extends Controller
 {
     /**

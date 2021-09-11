@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Session;
 use App\Models\Product;
 use Illuminate\Http\Request;
-
+use App\Http\Requests\ProductRequest;
 class ProductController extends Controller
 {
     /**
@@ -18,6 +18,8 @@ class ProductController extends Controller
         return view('pages.product.index')->with('products', $products);
     }
 
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -28,6 +30,9 @@ class ProductController extends Controller
         return view('pages.product.product_create');
     }
 
+
+
+
     /**
      * Store a newly created resource in storage.
      *
@@ -35,19 +40,32 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function product_store(Request $request)
-    {//insery data into students table
-         $this->validate($request,[
-            'product_id'=>'required',
+    {
+  
+      
+
+           //Check validation
+        $this->validate($request,[
+
+           'product_id'=>'required',
             'category_id'=>'required',
-'title'=>'required|string|max:15',
-'cost_price'=>'required|min:2',
-'price'=>'required|min:2'
+'title'=>'string|required',
+'description'=>'text|required',
+'cost_price'=>'required',
+'price'=>'required'
+
         ]);
+      
+
+     
+
+      
 
         $product=new Product();
         
         $product->product_id=$request->product_id;
         $product->category_id=$request->category_id;
+        $product->category=$request->category;
         $product->title=$request->title;
         $product->description=$request->description;
         $product->cost_price=$request->cost_price;
@@ -57,6 +75,10 @@ class ProductController extends Controller
         $product->save();
         return redirect()->route('product');
     }
+
+
+
+
 
     /**
      * Display the specified resource.
@@ -90,11 +112,13 @@ class ProductController extends Controller
 
         $product->product_id=$request->product_id;
         $product->category_id=$request->category_id;
+        $product->category=$request->category;
         $product->title=$request->title;
         $product->description=$request->description;
         $product->cost_price=$request->cost_price;
         $product->price=$request->price;
         $product->image=$request->image;
+
         $product->save();
         return redirect()->route('product');
     }

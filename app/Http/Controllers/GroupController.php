@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Session;
+use App\Models\User;
 use App\Models\Group;
 use Illuminate\Http\Request;
 use DB;
@@ -14,7 +15,7 @@ class GroupController extends Controller
      */
    
   
-public function index()
+public function groups()
     {
         $this->data['groups']=Group::all();
         return view('pages.group.groups',$this->data);

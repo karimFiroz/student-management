@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Models;
-use App\Models\Group;
+
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -17,6 +17,10 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
+        'user_id',
+        'admin_id',
+        'group_id',
+        'group',
         'name',
         'email',
         'password',
@@ -43,9 +47,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+protected $table='users';
 
-    public function group(){
-    return $this->belongsTo(Group::class);
+
+
+    public function groups(){
+    return $this->belongsTo('Group::class');
 }
 
 }

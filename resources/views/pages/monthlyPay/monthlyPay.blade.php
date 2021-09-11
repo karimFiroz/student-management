@@ -3,14 +3,6 @@
 @section('main_content')
 
 
-
-
-
- @if(Session('message'))
-<div class="alert alert-success" role="alert">
-{{Session('message')}}
-</div>
-@endif
         <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +16,10 @@
               <div class="card-header">
                 <h3 class="card-title">Students Monthly Payment</h3>
   <center><a href="{{route('monthlyPay_create')}}"class="btn btn-info btn-sm"><i class="fa fa-plus"></i></a></center>
+
+
+
+
 
                 <a href="{{route('file-upload')}}"target=" _blank">Upload</a>|
     <a href="{{route('delete-file')}}">Delete</a>

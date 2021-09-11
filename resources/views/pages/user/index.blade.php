@@ -29,6 +29,7 @@
                                             <th>SN</th>
                                             <th>ID</th>
                                             <th>User_ID</th>
+                                            <th>Admin_ID</th>
                                             <th>Group_ID</th>
                                             <th>Group</th>
                                             <th>Name</th>
@@ -45,6 +46,7 @@
                                            <th>SN</th>
                                             <th>ID</th>
                                             <th>User_ID</th>
+                                            <th>Admin_ID</th>
                                             <th>Group_ID</th>
                                             <th>Group</th>
                                             <th>Name</th>
@@ -75,6 +77,7 @@
                                             <td>{{ $i }}</td>
                                             <td>{{$user->id}}</td>
                                             <td>{{$user->user_id}}</td>
+                                            <td>{{$user->admin_id}}</td>
                                             <td>{{$user->group_id}}</td>
                                             <td>{{$user->group}}</td>
                                             <td>{{$user->name}}</td>

@@ -35,8 +35,15 @@ return view('pages.monthlyPay.monthlyPay')->with('monthlyPays',$monthlyPays);
      * @return \Illuminate\Http\Response
      */
         public function monthlyPay_store(Request $request)
-    {//insery data into students table
+    {
        //Check validation
+        $this->validate($request,[
+            'reg_id'=>'required',
+            'date'=>'required',
+            'section'=>'required',
+            'roll'=>'required',
+            'total'=>'required'
+        ]);
       
 
         $monthlyPay = new MonthlyPay();

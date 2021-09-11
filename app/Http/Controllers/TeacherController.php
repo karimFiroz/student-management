@@ -35,7 +35,19 @@ class TeacherController extends Controller
      */
     public function teacher_store(Request $request)
     {
-     
+         //Check validation
+        $this->validate($request,[
+            'teacher_id'=>'required',
+            'index_id'=>'required',
+            'name'=>'required|string|max:15',
+            'designation'=>'required',
+            'email'=>'nullable|email|unique:teachers',
+            'degree'=>'required',
+           'address'=>'required',
+            'password'=>'required|min:6',
+            'mobile'=>'required|numeric|unique:teachers',
+        
+        ]);
         $teacher=new Teacher();
         
         $teacher->teacher_id=$request->teacher_id;

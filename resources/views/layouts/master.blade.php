@@ -25,7 +25,7 @@
     
     <div class="row">
         
-<div class="col-md-2 margin-top-20">
+<div class="col-md-3 margin-top-20">
   <h4>Menu</h4>
 @include('partials.left-sidebar')
 </div>
@@ -33,16 +33,19 @@
 
 
 
-<div class="col-md-10">
+<div class="col-md-9">
 
 
-<!--  @if(Session('message'))
+<!--  
+
+
+@if(Session('message'))
 <div class="alert alert-success" role="alert">
 {{Session('message')}}
 </div>
 @endif
 
- -->
+ 
         @if ($errors->any())
       <div class="alert alert-danger">
           <ul>
@@ -51,7 +54,10 @@
               @endforeach
           </ul>
       </div>
-  @endif
+  @endif 
+
+
+-->
 
 @yield('main_content')
 

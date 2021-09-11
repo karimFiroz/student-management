@@ -23,7 +23,7 @@ use App\Http\Controllers\RegistrationController;
 
 
 use App\Models\Group;
-use App\Models\Category;
+use App\Models\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,7 +35,6 @@ Route::get('/', function () {
 
 |
 */
-
 
 
 //products
@@ -65,7 +64,7 @@ Route::get('/dashboard', [SuperAdminController::class, 'index'])->name('dashboar
 
 //groups
 
-Route::get('/groups', [GroupController::class, 'index'])->name('groups');
+Route::get('/groups', [GroupController::class, 'groups'])->name('groups');
 Route::get('/groups_create', [GroupController::class, 'groups_create'])->name('groups_create');
 Route::post('/groups_store', [GroupController::class, 'groups_store'])->name('groups_store');
 Route::get('/groups_edit/{id}', [GroupController::class, 'groups_edit'])->name('groups_edit');
@@ -73,7 +72,14 @@ Route::post('/groups_update/{id}', [GroupController::class, 'groups_update'])->n
 Route::post('/groups_delete/{id}', [GroupController::class, 'groups_delete'])->name('groups_delete');
 
 
-
+//users
+Route::get('/users', [UserController::class, 'users'])->name('users');
+Route::get('/user_create', [UserController::class, 'user_create'])->name('user_create');
+Route::post('/user_store', [UserController::class, 'user_store'])->name('user_store');
+Route::get('/user_edit/{id}', [UserController::class, 'user_edit'])->name('user_edit');
+Route::post('/user_update/{id}', [UserController::class, 'user_update'])->name('user_update');
+Route::post('/user_delete/{id}', [UserController::class, 'user_delete'])->name('user_delete');
+Route::get('/user_show/{id}', [UserController::class, 'user_show'])->name('user_show');
 
 
 
@@ -128,15 +134,7 @@ Route::post('/student_delete/{id}', [StudentController::class, 'student_delete']
 
 
 
-//users
-Route::get('/users', [UserController::class, 'index'])->name('users');
-Route::get('/user_create', [UserController::class, 'user_create'])->name('user_create');
-Route::post('/user_store', [UserController::class, 'user_store'])->name('user_store');
-Route::get('/user_edit/{id}', [UserController::class, 'user_edit'])->name('user_edit');
-Route::post('/user_update/{id}', [UserController::class, 'user_update'])->name('user_update');
-Route::post('/user_delete/{id}', [UserController::class, 'user_delete'])->name('user_delete');
 
-Route::get('/user_show/{id}', [UserController::class, 'user_show'])->name('user_show');
 
 
 
@@ -147,8 +145,6 @@ Route::post('/teacher_store',[TeacherController::class,'teacher_store'])->name('
 Route::get('/teacher_edit{id}',[TeacherController::class,'teacher_edit'])->name('teacher_edit');
 Route::post('/teacher_update{id}',[TeacherController::class,'teacher_update'])->name('teacher_update');
 Route::post('/teacher_delete{id}',[TeacherController::class,'teacher_delete'])->name('teacher_delete');
-
-
 Route::get('/employee_teacher', [TeacherController::class, 'employee_teacher'])->name('employee_teacher');
 
 //Images

@@ -47,7 +47,14 @@
                                          <th>Category_ID:</th>
                                               <td>{{$product->category_id}}</td>
                                           </tr>
-                                            
+                                           
+
+                                        <tr>
+                                         <th>Category:</th>
+                                              <td>{{$product->category->title}}</td>
+                                          </tr>
+
+
                                         <tr>
                                          <th>Title:</th>
                                              <td>{{$product->title}}</td>

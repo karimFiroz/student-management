@@ -44,7 +44,10 @@
                                          <th>User_ID:</th>
                                               <td>{{$user->user_id}}</td>
                                           </tr>
-                                            
+                                              <tr>
+                                         <th>Admin_ID:</th>
+                                              <td>{{$user->admin_id}}</td>
+                                          </tr>
                                         <tr>
                                          <th>Group_ID:</th>
                                              <td>{{$user->group_id}}</td>

@@ -32,8 +32,13 @@ public function index()
 
            //Check validation
         $this->validate($request,[
-            'title'=>'string|required'
+
+
+           'title'=>'string|required'
+
         ]);
+
+        
 
      $formData=$request->all();
     if(Category::create($formData)){
